@@ -1,8 +1,22 @@
-# Use the user-provided builder image for ARM64
-FROM ubuntu-arm-builder:latest
+# Use official Ubuntu 20.04 as a base image for ARM64
+FROM --platform=linux/arm64 ubuntu:20.04
+
+# Set DEBIAN_FRONTEND to noninteractive to avoid prompts during apt-get install
+ENV DEBIAN_FRONTEND=noninteractive
 
 # Set the working directory inside the container
 WORKDIR /app
+
+# Replace sources.list with Tsinghua University mirrors (http first)
+RUN echo "deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ focal main restricted universe multiverse" > /etc/apt/sources.list && \
+    echo "deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ focal-updates main restricted universe multiverse" >> /etc/apt/sources.list && \
+    echo "deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ focal-backports main restricted universe multiverse" >> /etc/apt/sources.list && \
+    echo "deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ focal-security main restricted universe multiverse" >> /etc/apt/sources.list
+
+# Install ca-certificates to enable https, then switch sources to https
+RUN apt-get update && \
+    apt-get install -y ca-certificates && \
+    sed -i 's/http/https/g' /etc/apt/sources.list
 
 # Install build dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
