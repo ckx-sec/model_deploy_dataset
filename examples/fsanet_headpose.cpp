@@ -27,8 +27,8 @@ int main() {
     Ort::AllocatorWithDefaultOptions allocator;
 
     // --- Get model input/output details ---
-    std::vector<const char*> input_node_names = {"input_1"};
-    std::vector<const char*> output_node_names = {"output_1"};
+    std::vector<const char*> input_node_names = {"input"};
+    std::vector<const char*> output_node_names = {"output"};
 
     std::cout << "--- Model Inputs ---" << std::endl;
     std::cout << "Input 0 : name=" << input_node_names[0] << std::endl;
