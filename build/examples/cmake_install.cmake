@@ -37,3 +37,10 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for each subdirectory.
+  include("/app/build/examples/onnxruntime/cmake_install.cmake")
+  include("/app/build/examples/mnn/cmake_install.cmake")
+
+endif()
+

@@ -124,6 +124,19 @@ multi_engine_lib/fast:
 .PHONY : multi_engine_lib/fast
 
 #=============================================================================
+# Target rules for targets named clean_assets
+
+# Build rule for target.
+clean_assets: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 clean_assets
+.PHONY : clean_assets
+
+# fast build rule for target.
+clean_assets/fast:
+	$(MAKE) -f examples/CMakeFiles/clean_assets.dir/build.make examples/CMakeFiles/clean_assets.dir/build
+.PHONY : clean_assets/fast
+
+#=============================================================================
 # Target rules for targets named gender_googlenet
 
 # Build rule for target.
@@ -133,7 +146,7 @@ gender_googlenet: cmake_check_build_system
 
 # fast build rule for target.
 gender_googlenet/fast:
-	$(MAKE) -f examples/CMakeFiles/gender_googlenet.dir/build.make examples/CMakeFiles/gender_googlenet.dir/build
+	$(MAKE) -f examples/onnxruntime/CMakeFiles/gender_googlenet.dir/build.make examples/onnxruntime/CMakeFiles/gender_googlenet.dir/build
 .PHONY : gender_googlenet/fast
 
 #=============================================================================
@@ -146,7 +159,7 @@ emotion_ferplus: cmake_check_build_system
 
 # fast build rule for target.
 emotion_ferplus/fast:
-	$(MAKE) -f examples/CMakeFiles/emotion_ferplus.dir/build.make examples/CMakeFiles/emotion_ferplus.dir/build
+	$(MAKE) -f examples/onnxruntime/CMakeFiles/emotion_ferplus.dir/build.make examples/onnxruntime/CMakeFiles/emotion_ferplus.dir/build
 .PHONY : emotion_ferplus/fast
 
 #=============================================================================
@@ -159,7 +172,7 @@ pfld_landmarks: cmake_check_build_system
 
 # fast build rule for target.
 pfld_landmarks/fast:
-	$(MAKE) -f examples/CMakeFiles/pfld_landmarks.dir/build.make examples/CMakeFiles/pfld_landmarks.dir/build
+	$(MAKE) -f examples/onnxruntime/CMakeFiles/pfld_landmarks.dir/build.make examples/onnxruntime/CMakeFiles/pfld_landmarks.dir/build
 .PHONY : pfld_landmarks/fast
 
 #=============================================================================
@@ -172,7 +185,7 @@ yolov5_detector: cmake_check_build_system
 
 # fast build rule for target.
 yolov5_detector/fast:
-	$(MAKE) -f examples/CMakeFiles/yolov5_detector.dir/build.make examples/CMakeFiles/yolov5_detector.dir/build
+	$(MAKE) -f examples/onnxruntime/CMakeFiles/yolov5_detector.dir/build.make examples/onnxruntime/CMakeFiles/yolov5_detector.dir/build
 .PHONY : yolov5_detector/fast
 
 #=============================================================================
@@ -185,7 +198,7 @@ ultraface_detector: cmake_check_build_system
 
 # fast build rule for target.
 ultraface_detector/fast:
-	$(MAKE) -f examples/CMakeFiles/ultraface_detector.dir/build.make examples/CMakeFiles/ultraface_detector.dir/build
+	$(MAKE) -f examples/onnxruntime/CMakeFiles/ultraface_detector.dir/build.make examples/onnxruntime/CMakeFiles/ultraface_detector.dir/build
 .PHONY : ultraface_detector/fast
 
 #=============================================================================
@@ -198,7 +211,7 @@ fsanet_headpose: cmake_check_build_system
 
 # fast build rule for target.
 fsanet_headpose/fast:
-	$(MAKE) -f examples/CMakeFiles/fsanet_headpose.dir/build.make examples/CMakeFiles/fsanet_headpose.dir/build
+	$(MAKE) -f examples/onnxruntime/CMakeFiles/fsanet_headpose.dir/build.make examples/onnxruntime/CMakeFiles/fsanet_headpose.dir/build
 .PHONY : fsanet_headpose/fast
 
 #=============================================================================
@@ -211,7 +224,7 @@ example: cmake_check_build_system
 
 # fast build rule for target.
 example/fast:
-	$(MAKE) -f examples/CMakeFiles/example.dir/build.make examples/CMakeFiles/example.dir/build
+	$(MAKE) -f examples/onnxruntime/CMakeFiles/example.dir/build.make examples/onnxruntime/CMakeFiles/example.dir/build
 .PHONY : example/fast
 
 # Help Target
@@ -223,6 +236,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... multi_engine_lib"
+	@echo "... clean_assets"
 	@echo "... gender_googlenet"
 	@echo "... emotion_ferplus"
 	@echo "... pfld_landmarks"

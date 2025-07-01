@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /app/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,6 +66,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,298 +111,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-examples/CMakeFiles/gender_googlenet.dir/rule:
-	cd /app/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/gender_googlenet.dir/rule
-.PHONY : examples/CMakeFiles/gender_googlenet.dir/rule
+examples/CMakeFiles/clean_assets.dir/rule:
+	cd /app/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/clean_assets.dir/rule
+.PHONY : examples/CMakeFiles/clean_assets.dir/rule
 
 # Convenience name for target.
-gender_googlenet: examples/CMakeFiles/gender_googlenet.dir/rule
+clean_assets: examples/CMakeFiles/clean_assets.dir/rule
 
-.PHONY : gender_googlenet
+.PHONY : clean_assets
 
 # fast build rule for target.
-gender_googlenet/fast:
-	cd /app/build && $(MAKE) -f examples/CMakeFiles/gender_googlenet.dir/build.make examples/CMakeFiles/gender_googlenet.dir/build
-.PHONY : gender_googlenet/fast
-
-# Convenience name for target.
-examples/CMakeFiles/emotion_ferplus.dir/rule:
-	cd /app/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/emotion_ferplus.dir/rule
-.PHONY : examples/CMakeFiles/emotion_ferplus.dir/rule
-
-# Convenience name for target.
-emotion_ferplus: examples/CMakeFiles/emotion_ferplus.dir/rule
-
-.PHONY : emotion_ferplus
-
-# fast build rule for target.
-emotion_ferplus/fast:
-	cd /app/build && $(MAKE) -f examples/CMakeFiles/emotion_ferplus.dir/build.make examples/CMakeFiles/emotion_ferplus.dir/build
-.PHONY : emotion_ferplus/fast
-
-# Convenience name for target.
-examples/CMakeFiles/pfld_landmarks.dir/rule:
-	cd /app/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/pfld_landmarks.dir/rule
-.PHONY : examples/CMakeFiles/pfld_landmarks.dir/rule
-
-# Convenience name for target.
-pfld_landmarks: examples/CMakeFiles/pfld_landmarks.dir/rule
-
-.PHONY : pfld_landmarks
-
-# fast build rule for target.
-pfld_landmarks/fast:
-	cd /app/build && $(MAKE) -f examples/CMakeFiles/pfld_landmarks.dir/build.make examples/CMakeFiles/pfld_landmarks.dir/build
-.PHONY : pfld_landmarks/fast
-
-# Convenience name for target.
-examples/CMakeFiles/yolov5_detector.dir/rule:
-	cd /app/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/yolov5_detector.dir/rule
-.PHONY : examples/CMakeFiles/yolov5_detector.dir/rule
-
-# Convenience name for target.
-yolov5_detector: examples/CMakeFiles/yolov5_detector.dir/rule
-
-.PHONY : yolov5_detector
-
-# fast build rule for target.
-yolov5_detector/fast:
-	cd /app/build && $(MAKE) -f examples/CMakeFiles/yolov5_detector.dir/build.make examples/CMakeFiles/yolov5_detector.dir/build
-.PHONY : yolov5_detector/fast
-
-# Convenience name for target.
-examples/CMakeFiles/ultraface_detector.dir/rule:
-	cd /app/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/ultraface_detector.dir/rule
-.PHONY : examples/CMakeFiles/ultraface_detector.dir/rule
-
-# Convenience name for target.
-ultraface_detector: examples/CMakeFiles/ultraface_detector.dir/rule
-
-.PHONY : ultraface_detector
-
-# fast build rule for target.
-ultraface_detector/fast:
-	cd /app/build && $(MAKE) -f examples/CMakeFiles/ultraface_detector.dir/build.make examples/CMakeFiles/ultraface_detector.dir/build
-.PHONY : ultraface_detector/fast
-
-# Convenience name for target.
-examples/CMakeFiles/fsanet_headpose.dir/rule:
-	cd /app/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/fsanet_headpose.dir/rule
-.PHONY : examples/CMakeFiles/fsanet_headpose.dir/rule
-
-# Convenience name for target.
-fsanet_headpose: examples/CMakeFiles/fsanet_headpose.dir/rule
-
-.PHONY : fsanet_headpose
-
-# fast build rule for target.
-fsanet_headpose/fast:
-	cd /app/build && $(MAKE) -f examples/CMakeFiles/fsanet_headpose.dir/build.make examples/CMakeFiles/fsanet_headpose.dir/build
-.PHONY : fsanet_headpose/fast
-
-# Convenience name for target.
-examples/CMakeFiles/example.dir/rule:
-	cd /app/build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/example.dir/rule
-.PHONY : examples/CMakeFiles/example.dir/rule
-
-# Convenience name for target.
-example: examples/CMakeFiles/example.dir/rule
-
-.PHONY : example
-
-# fast build rule for target.
-example/fast:
-	cd /app/build && $(MAKE) -f examples/CMakeFiles/example.dir/build.make examples/CMakeFiles/example.dir/build
-.PHONY : example/fast
-
-emotion_ferplus.o: emotion_ferplus.cpp.o
-
-.PHONY : emotion_ferplus.o
-
-# target to build an object file
-emotion_ferplus.cpp.o:
-	cd /app/build && $(MAKE) -f examples/CMakeFiles/emotion_ferplus.dir/build.make examples/CMakeFiles/emotion_ferplus.dir/emotion_ferplus.cpp.o
-.PHONY : emotion_ferplus.cpp.o
-
-emotion_ferplus.i: emotion_ferplus.cpp.i
-
-.PHONY : emotion_ferplus.i
-
-# target to preprocess a source file
-emotion_ferplus.cpp.i:
-	cd /app/build && $(MAKE) -f examples/CMakeFiles/emotion_ferplus.dir/build.make examples/CMakeFiles/emotion_ferplus.dir/emotion_ferplus.cpp.i
-.PHONY : emotion_ferplus.cpp.i
-
-emotion_ferplus.s: emotion_ferplus.cpp.s
-
-.PHONY : emotion_ferplus.s
-
-# target to generate assembly for a file
-emotion_ferplus.cpp.s:
-	cd /app/build && $(MAKE) -f examples/CMakeFiles/emotion_ferplus.dir/build.make examples/CMakeFiles/emotion_ferplus.dir/emotion_ferplus.cpp.s
-.PHONY : emotion_ferplus.cpp.s
-
-example.o: example.cpp.o
-
-.PHONY : example.o
-
-# target to build an object file
-example.cpp.o:
-	cd /app/build && $(MAKE) -f examples/CMakeFiles/example.dir/build.make examples/CMakeFiles/example.dir/example.cpp.o
-.PHONY : example.cpp.o
-
-example.i: example.cpp.i
-
-.PHONY : example.i
-
-# target to preprocess a source file
-example.cpp.i:
-	cd /app/build && $(MAKE) -f examples/CMakeFiles/example.dir/build.make examples/CMakeFiles/example.dir/example.cpp.i
-.PHONY : example.cpp.i
-
-example.s: example.cpp.s
-
-.PHONY : example.s
-
-# target to generate assembly for a file
-example.cpp.s:
-	cd /app/build && $(MAKE) -f examples/CMakeFiles/example.dir/build.make examples/CMakeFiles/example.dir/example.cpp.s
-.PHONY : example.cpp.s
-
-fsanet_headpose.o: fsanet_headpose.cpp.o
-
-.PHONY : fsanet_headpose.o
-
-# target to build an object file
-fsanet_headpose.cpp.o:
-	cd /app/build && $(MAKE) -f examples/CMakeFiles/fsanet_headpose.dir/build.make examples/CMakeFiles/fsanet_headpose.dir/fsanet_headpose.cpp.o
-.PHONY : fsanet_headpose.cpp.o
-
-fsanet_headpose.i: fsanet_headpose.cpp.i
-
-.PHONY : fsanet_headpose.i
-
-# target to preprocess a source file
-fsanet_headpose.cpp.i:
-	cd /app/build && $(MAKE) -f examples/CMakeFiles/fsanet_headpose.dir/build.make examples/CMakeFiles/fsanet_headpose.dir/fsanet_headpose.cpp.i
-.PHONY : fsanet_headpose.cpp.i
-
-fsanet_headpose.s: fsanet_headpose.cpp.s
-
-.PHONY : fsanet_headpose.s
-
-# target to generate assembly for a file
-fsanet_headpose.cpp.s:
-	cd /app/build && $(MAKE) -f examples/CMakeFiles/fsanet_headpose.dir/build.make examples/CMakeFiles/fsanet_headpose.dir/fsanet_headpose.cpp.s
-.PHONY : fsanet_headpose.cpp.s
-
-gender_googlenet.o: gender_googlenet.cpp.o
-
-.PHONY : gender_googlenet.o
-
-# target to build an object file
-gender_googlenet.cpp.o:
-	cd /app/build && $(MAKE) -f examples/CMakeFiles/gender_googlenet.dir/build.make examples/CMakeFiles/gender_googlenet.dir/gender_googlenet.cpp.o
-.PHONY : gender_googlenet.cpp.o
-
-gender_googlenet.i: gender_googlenet.cpp.i
-
-.PHONY : gender_googlenet.i
-
-# target to preprocess a source file
-gender_googlenet.cpp.i:
-	cd /app/build && $(MAKE) -f examples/CMakeFiles/gender_googlenet.dir/build.make examples/CMakeFiles/gender_googlenet.dir/gender_googlenet.cpp.i
-.PHONY : gender_googlenet.cpp.i
-
-gender_googlenet.s: gender_googlenet.cpp.s
-
-.PHONY : gender_googlenet.s
-
-# target to generate assembly for a file
-gender_googlenet.cpp.s:
-	cd /app/build && $(MAKE) -f examples/CMakeFiles/gender_googlenet.dir/build.make examples/CMakeFiles/gender_googlenet.dir/gender_googlenet.cpp.s
-.PHONY : gender_googlenet.cpp.s
-
-pfld_landmarks.o: pfld_landmarks.cpp.o
-
-.PHONY : pfld_landmarks.o
-
-# target to build an object file
-pfld_landmarks.cpp.o:
-	cd /app/build && $(MAKE) -f examples/CMakeFiles/pfld_landmarks.dir/build.make examples/CMakeFiles/pfld_landmarks.dir/pfld_landmarks.cpp.o
-.PHONY : pfld_landmarks.cpp.o
-
-pfld_landmarks.i: pfld_landmarks.cpp.i
-
-.PHONY : pfld_landmarks.i
-
-# target to preprocess a source file
-pfld_landmarks.cpp.i:
-	cd /app/build && $(MAKE) -f examples/CMakeFiles/pfld_landmarks.dir/build.make examples/CMakeFiles/pfld_landmarks.dir/pfld_landmarks.cpp.i
-.PHONY : pfld_landmarks.cpp.i
-
-pfld_landmarks.s: pfld_landmarks.cpp.s
-
-.PHONY : pfld_landmarks.s
-
-# target to generate assembly for a file
-pfld_landmarks.cpp.s:
-	cd /app/build && $(MAKE) -f examples/CMakeFiles/pfld_landmarks.dir/build.make examples/CMakeFiles/pfld_landmarks.dir/pfld_landmarks.cpp.s
-.PHONY : pfld_landmarks.cpp.s
-
-ultraface_detector.o: ultraface_detector.cpp.o
-
-.PHONY : ultraface_detector.o
-
-# target to build an object file
-ultraface_detector.cpp.o:
-	cd /app/build && $(MAKE) -f examples/CMakeFiles/ultraface_detector.dir/build.make examples/CMakeFiles/ultraface_detector.dir/ultraface_detector.cpp.o
-.PHONY : ultraface_detector.cpp.o
-
-ultraface_detector.i: ultraface_detector.cpp.i
-
-.PHONY : ultraface_detector.i
-
-# target to preprocess a source file
-ultraface_detector.cpp.i:
-	cd /app/build && $(MAKE) -f examples/CMakeFiles/ultraface_detector.dir/build.make examples/CMakeFiles/ultraface_detector.dir/ultraface_detector.cpp.i
-.PHONY : ultraface_detector.cpp.i
-
-ultraface_detector.s: ultraface_detector.cpp.s
-
-.PHONY : ultraface_detector.s
-
-# target to generate assembly for a file
-ultraface_detector.cpp.s:
-	cd /app/build && $(MAKE) -f examples/CMakeFiles/ultraface_detector.dir/build.make examples/CMakeFiles/ultraface_detector.dir/ultraface_detector.cpp.s
-.PHONY : ultraface_detector.cpp.s
-
-yolov5_detector.o: yolov5_detector.cpp.o
-
-.PHONY : yolov5_detector.o
-
-# target to build an object file
-yolov5_detector.cpp.o:
-	cd /app/build && $(MAKE) -f examples/CMakeFiles/yolov5_detector.dir/build.make examples/CMakeFiles/yolov5_detector.dir/yolov5_detector.cpp.o
-.PHONY : yolov5_detector.cpp.o
-
-yolov5_detector.i: yolov5_detector.cpp.i
-
-.PHONY : yolov5_detector.i
-
-# target to preprocess a source file
-yolov5_detector.cpp.i:
-	cd /app/build && $(MAKE) -f examples/CMakeFiles/yolov5_detector.dir/build.make examples/CMakeFiles/yolov5_detector.dir/yolov5_detector.cpp.i
-.PHONY : yolov5_detector.cpp.i
-
-yolov5_detector.s: yolov5_detector.cpp.s
-
-.PHONY : yolov5_detector.s
-
-# target to generate assembly for a file
-yolov5_detector.cpp.s:
-	cd /app/build && $(MAKE) -f examples/CMakeFiles/yolov5_detector.dir/build.make examples/CMakeFiles/yolov5_detector.dir/yolov5_detector.cpp.s
-.PHONY : yolov5_detector.cpp.s
+clean_assets/fast:
+	cd /app/build && $(MAKE) -f examples/CMakeFiles/clean_assets.dir/build.make examples/CMakeFiles/clean_assets.dir/build
+.PHONY : clean_assets/fast
 
 # Help Target
 help:
@@ -410,36 +131,9 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
-	@echo "... gender_googlenet"
-	@echo "... emotion_ferplus"
 	@echo "... rebuild_cache"
-	@echo "... pfld_landmarks"
-	@echo "... yolov5_detector"
-	@echo "... ultraface_detector"
-	@echo "... fsanet_headpose"
-	@echo "... example"
-	@echo "... emotion_ferplus.o"
-	@echo "... emotion_ferplus.i"
-	@echo "... emotion_ferplus.s"
-	@echo "... example.o"
-	@echo "... example.i"
-	@echo "... example.s"
-	@echo "... fsanet_headpose.o"
-	@echo "... fsanet_headpose.i"
-	@echo "... fsanet_headpose.s"
-	@echo "... gender_googlenet.o"
-	@echo "... gender_googlenet.i"
-	@echo "... gender_googlenet.s"
-	@echo "... pfld_landmarks.o"
-	@echo "... pfld_landmarks.i"
-	@echo "... pfld_landmarks.s"
-	@echo "... ultraface_detector.o"
-	@echo "... ultraface_detector.i"
-	@echo "... ultraface_detector.s"
-	@echo "... yolov5_detector.o"
-	@echo "... yolov5_detector.i"
-	@echo "... yolov5_detector.s"
+	@echo "... edit_cache"
+	@echo "... clean_assets"
 .PHONY : help
 
 
