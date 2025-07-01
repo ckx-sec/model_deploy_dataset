@@ -20,6 +20,9 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 if(MEI_ENABLE_ONNXRUNTIME)
     include(onnxruntime)
 endif()
+if(MEI_ENABLE_MNN)
+    include(mnn)
+endif()
 # We always need OpenCV for the examples for now
 include(opencv)
 

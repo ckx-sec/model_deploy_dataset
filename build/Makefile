@@ -137,6 +137,19 @@ clean_assets/fast:
 .PHONY : clean_assets/fast
 
 #=============================================================================
+# Target rules for targets named ssrnet_age_onnxruntime
+
+# Build rule for target.
+ssrnet_age_onnxruntime: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ssrnet_age_onnxruntime
+.PHONY : ssrnet_age_onnxruntime
+
+# fast build rule for target.
+ssrnet_age_onnxruntime/fast:
+	$(MAKE) -f examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/build
+.PHONY : ssrnet_age_onnxruntime/fast
+
+#=============================================================================
 # Target rules for targets named fsanet_headpose_onnxruntime
 
 # Build rule for target.
@@ -227,6 +240,110 @@ example_onnxruntime/fast:
 	$(MAKE) -f examples/onnxruntime/CMakeFiles/example_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/example_onnxruntime.dir/build
 .PHONY : example_onnxruntime/fast
 
+#=============================================================================
+# Target rules for targets named emotion_ferplus_mnn
+
+# Build rule for target.
+emotion_ferplus_mnn: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 emotion_ferplus_mnn
+.PHONY : emotion_ferplus_mnn
+
+# fast build rule for target.
+emotion_ferplus_mnn/fast:
+	$(MAKE) -f examples/mnn/CMakeFiles/emotion_ferplus_mnn.dir/build.make examples/mnn/CMakeFiles/emotion_ferplus_mnn.dir/build
+.PHONY : emotion_ferplus_mnn/fast
+
+#=============================================================================
+# Target rules for targets named fsanet_headpose_mnn
+
+# Build rule for target.
+fsanet_headpose_mnn: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 fsanet_headpose_mnn
+.PHONY : fsanet_headpose_mnn
+
+# fast build rule for target.
+fsanet_headpose_mnn/fast:
+	$(MAKE) -f examples/mnn/CMakeFiles/fsanet_headpose_mnn.dir/build.make examples/mnn/CMakeFiles/fsanet_headpose_mnn.dir/build
+.PHONY : fsanet_headpose_mnn/fast
+
+#=============================================================================
+# Target rules for targets named gender_googlenet_mnn
+
+# Build rule for target.
+gender_googlenet_mnn: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gender_googlenet_mnn
+.PHONY : gender_googlenet_mnn
+
+# fast build rule for target.
+gender_googlenet_mnn/fast:
+	$(MAKE) -f examples/mnn/CMakeFiles/gender_googlenet_mnn.dir/build.make examples/mnn/CMakeFiles/gender_googlenet_mnn.dir/build
+.PHONY : gender_googlenet_mnn/fast
+
+#=============================================================================
+# Target rules for targets named pfld_landmarks_mnn
+
+# Build rule for target.
+pfld_landmarks_mnn: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pfld_landmarks_mnn
+.PHONY : pfld_landmarks_mnn
+
+# fast build rule for target.
+pfld_landmarks_mnn/fast:
+	$(MAKE) -f examples/mnn/CMakeFiles/pfld_landmarks_mnn.dir/build.make examples/mnn/CMakeFiles/pfld_landmarks_mnn.dir/build
+.PHONY : pfld_landmarks_mnn/fast
+
+#=============================================================================
+# Target rules for targets named ultraface_detector_mnn
+
+# Build rule for target.
+ultraface_detector_mnn: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ultraface_detector_mnn
+.PHONY : ultraface_detector_mnn
+
+# fast build rule for target.
+ultraface_detector_mnn/fast:
+	$(MAKE) -f examples/mnn/CMakeFiles/ultraface_detector_mnn.dir/build.make examples/mnn/CMakeFiles/ultraface_detector_mnn.dir/build
+.PHONY : ultraface_detector_mnn/fast
+
+#=============================================================================
+# Target rules for targets named ssrnet_age_mnn
+
+# Build rule for target.
+ssrnet_age_mnn: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ssrnet_age_mnn
+.PHONY : ssrnet_age_mnn
+
+# fast build rule for target.
+ssrnet_age_mnn/fast:
+	$(MAKE) -f examples/mnn/CMakeFiles/ssrnet_age_mnn.dir/build.make examples/mnn/CMakeFiles/ssrnet_age_mnn.dir/build
+.PHONY : ssrnet_age_mnn/fast
+
+#=============================================================================
+# Target rules for targets named yolov5_detector_mnn
+
+# Build rule for target.
+yolov5_detector_mnn: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 yolov5_detector_mnn
+.PHONY : yolov5_detector_mnn
+
+# fast build rule for target.
+yolov5_detector_mnn/fast:
+	$(MAKE) -f examples/mnn/CMakeFiles/yolov5_detector_mnn.dir/build.make examples/mnn/CMakeFiles/yolov5_detector_mnn.dir/build
+.PHONY : yolov5_detector_mnn/fast
+
+#=============================================================================
+# Target rules for targets named example_mnn
+
+# Build rule for target.
+example_mnn: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 example_mnn
+.PHONY : example_mnn
+
+# fast build rule for target.
+example_mnn/fast:
+	$(MAKE) -f examples/mnn/CMakeFiles/example_mnn.dir/build.make examples/mnn/CMakeFiles/example_mnn.dir/build
+.PHONY : example_mnn/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -237,6 +354,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... model_deploy_dataset_lib"
 	@echo "... clean_assets"
+	@echo "... ssrnet_age_onnxruntime"
 	@echo "... fsanet_headpose_onnxruntime"
 	@echo "... yolov5_detector_onnxruntime"
 	@echo "... pfld_landmarks_onnxruntime"
@@ -244,6 +362,14 @@ help:
 	@echo "... ultraface_detector_onnxruntime"
 	@echo "... emotion_ferplus_onnxruntime"
 	@echo "... example_onnxruntime"
+	@echo "... emotion_ferplus_mnn"
+	@echo "... fsanet_headpose_mnn"
+	@echo "... gender_googlenet_mnn"
+	@echo "... pfld_landmarks_mnn"
+	@echo "... ultraface_detector_mnn"
+	@echo "... ssrnet_age_mnn"
+	@echo "... yolov5_detector_mnn"
+	@echo "... example_mnn"
 .PHONY : help
 
 

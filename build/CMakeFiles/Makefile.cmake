@@ -11,6 +11,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.16.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeSystem.cmake"
+  "../cmake/mnn.cmake"
   "../cmake/onnxruntime.cmake"
   "../cmake/opencv.cmake"
   "../examples/CMakeLists.txt"
@@ -63,6 +64,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "src/CMakeFiles/model_deploy_dataset_lib.dir/DependInfo.cmake"
   "examples/CMakeFiles/clean_assets.dir/DependInfo.cmake"
+  "examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/DependInfo.cmake"
   "examples/onnxruntime/CMakeFiles/fsanet_headpose_onnxruntime.dir/DependInfo.cmake"
   "examples/onnxruntime/CMakeFiles/yolov5_detector_onnxruntime.dir/DependInfo.cmake"
   "examples/onnxruntime/CMakeFiles/pfld_landmarks_onnxruntime.dir/DependInfo.cmake"
@@ -70,4 +72,12 @@ set(CMAKE_DEPEND_INFO_FILES
   "examples/onnxruntime/CMakeFiles/ultraface_detector_onnxruntime.dir/DependInfo.cmake"
   "examples/onnxruntime/CMakeFiles/emotion_ferplus_onnxruntime.dir/DependInfo.cmake"
   "examples/onnxruntime/CMakeFiles/example_onnxruntime.dir/DependInfo.cmake"
+  "examples/mnn/CMakeFiles/emotion_ferplus_mnn.dir/DependInfo.cmake"
+  "examples/mnn/CMakeFiles/fsanet_headpose_mnn.dir/DependInfo.cmake"
+  "examples/mnn/CMakeFiles/gender_googlenet_mnn.dir/DependInfo.cmake"
+  "examples/mnn/CMakeFiles/pfld_landmarks_mnn.dir/DependInfo.cmake"
+  "examples/mnn/CMakeFiles/ultraface_detector_mnn.dir/DependInfo.cmake"
+  "examples/mnn/CMakeFiles/ssrnet_age_mnn.dir/DependInfo.cmake"
+  "examples/mnn/CMakeFiles/yolov5_detector_mnn.dir/DependInfo.cmake"
+  "examples/mnn/CMakeFiles/example_mnn.dir/DependInfo.cmake"
   )

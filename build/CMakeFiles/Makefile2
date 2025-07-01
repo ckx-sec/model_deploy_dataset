@@ -96,7 +96,14 @@ examples/clean: examples/mnn/clean
 # Directory level rules for directory examples/mnn
 
 # Recursive "all" directory target.
-examples/mnn/all:
+examples/mnn/all: examples/mnn/CMakeFiles/emotion_ferplus_mnn.dir/all
+examples/mnn/all: examples/mnn/CMakeFiles/fsanet_headpose_mnn.dir/all
+examples/mnn/all: examples/mnn/CMakeFiles/gender_googlenet_mnn.dir/all
+examples/mnn/all: examples/mnn/CMakeFiles/pfld_landmarks_mnn.dir/all
+examples/mnn/all: examples/mnn/CMakeFiles/ultraface_detector_mnn.dir/all
+examples/mnn/all: examples/mnn/CMakeFiles/ssrnet_age_mnn.dir/all
+examples/mnn/all: examples/mnn/CMakeFiles/yolov5_detector_mnn.dir/all
+examples/mnn/all: examples/mnn/CMakeFiles/example_mnn.dir/all
 
 .PHONY : examples/mnn/all
 
@@ -106,7 +113,14 @@ examples/mnn/preinstall:
 .PHONY : examples/mnn/preinstall
 
 # Recursive "clean" directory target.
-examples/mnn/clean:
+examples/mnn/clean: examples/mnn/CMakeFiles/emotion_ferplus_mnn.dir/clean
+examples/mnn/clean: examples/mnn/CMakeFiles/fsanet_headpose_mnn.dir/clean
+examples/mnn/clean: examples/mnn/CMakeFiles/gender_googlenet_mnn.dir/clean
+examples/mnn/clean: examples/mnn/CMakeFiles/pfld_landmarks_mnn.dir/clean
+examples/mnn/clean: examples/mnn/CMakeFiles/ultraface_detector_mnn.dir/clean
+examples/mnn/clean: examples/mnn/CMakeFiles/ssrnet_age_mnn.dir/clean
+examples/mnn/clean: examples/mnn/CMakeFiles/yolov5_detector_mnn.dir/clean
+examples/mnn/clean: examples/mnn/CMakeFiles/example_mnn.dir/clean
 
 .PHONY : examples/mnn/clean
 
@@ -114,6 +128,7 @@ examples/mnn/clean:
 # Directory level rules for directory examples/onnxruntime
 
 # Recursive "all" directory target.
+examples/onnxruntime/all: examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/all
 examples/onnxruntime/all: examples/onnxruntime/CMakeFiles/fsanet_headpose_onnxruntime.dir/all
 examples/onnxruntime/all: examples/onnxruntime/CMakeFiles/yolov5_detector_onnxruntime.dir/all
 examples/onnxruntime/all: examples/onnxruntime/CMakeFiles/pfld_landmarks_onnxruntime.dir/all
@@ -130,6 +145,7 @@ examples/onnxruntime/preinstall:
 .PHONY : examples/onnxruntime/preinstall
 
 # Recursive "clean" directory target.
+examples/onnxruntime/clean: examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/clean
 examples/onnxruntime/clean: examples/onnxruntime/CMakeFiles/fsanet_headpose_onnxruntime.dir/clean
 examples/onnxruntime/clean: examples/onnxruntime/CMakeFiles/yolov5_detector_onnxruntime.dir/clean
 examples/onnxruntime/clean: examples/onnxruntime/CMakeFiles/pfld_landmarks_onnxruntime.dir/clean
@@ -165,7 +181,7 @@ src/clean: src/CMakeFiles/model_deploy_dataset_lib.dir/clean
 src/CMakeFiles/model_deploy_dataset_lib.dir/all:
 	$(MAKE) -f src/CMakeFiles/model_deploy_dataset_lib.dir/build.make src/CMakeFiles/model_deploy_dataset_lib.dir/depend
 	$(MAKE) -f src/CMakeFiles/model_deploy_dataset_lib.dir/build.make src/CMakeFiles/model_deploy_dataset_lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/build/CMakeFiles --progress-num=10,11 "Built target model_deploy_dataset_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/build/CMakeFiles --progress-num=18,19 "Built target model_deploy_dataset_lib"
 .PHONY : src/CMakeFiles/model_deploy_dataset_lib.dir/all
 
 # Build rule for subdir invocation for target.
@@ -213,6 +229,34 @@ examples/CMakeFiles/clean_assets.dir/clean:
 .PHONY : examples/CMakeFiles/clean_assets.dir/clean
 
 #=============================================================================
+# Target rules for target examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir
+
+# All Build rule for target.
+examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/all: src/CMakeFiles/model_deploy_dataset_lib.dir/all
+examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/all: examples/CMakeFiles/clean_assets.dir/all
+	$(MAKE) -f examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/depend
+	$(MAKE) -f examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/build/CMakeFiles --progress-num=26,27 "Built target ssrnet_age_onnxruntime"
+.PHONY : examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/all
+
+# Build rule for subdir invocation for target.
+examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /app/build/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /app/build/CMakeFiles 0
+.PHONY : examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/rule
+
+# Convenience name for target.
+ssrnet_age_onnxruntime: examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/rule
+
+.PHONY : ssrnet_age_onnxruntime
+
+# clean rule for target.
+examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/clean:
+	$(MAKE) -f examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/clean
+.PHONY : examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/clean
+
+#=============================================================================
 # Target rules for target examples/onnxruntime/CMakeFiles/fsanet_headpose_onnxruntime.dir
 
 # All Build rule for target.
@@ -220,7 +264,7 @@ examples/onnxruntime/CMakeFiles/fsanet_headpose_onnxruntime.dir/all: src/CMakeFi
 examples/onnxruntime/CMakeFiles/fsanet_headpose_onnxruntime.dir/all: examples/CMakeFiles/clean_assets.dir/all
 	$(MAKE) -f examples/onnxruntime/CMakeFiles/fsanet_headpose_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/fsanet_headpose_onnxruntime.dir/depend
 	$(MAKE) -f examples/onnxruntime/CMakeFiles/fsanet_headpose_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/fsanet_headpose_onnxruntime.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/build/CMakeFiles --progress-num=6,7 "Built target fsanet_headpose_onnxruntime"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/build/CMakeFiles --progress-num=12,13 "Built target fsanet_headpose_onnxruntime"
 .PHONY : examples/onnxruntime/CMakeFiles/fsanet_headpose_onnxruntime.dir/all
 
 # Build rule for subdir invocation for target.
@@ -248,7 +292,7 @@ examples/onnxruntime/CMakeFiles/yolov5_detector_onnxruntime.dir/all: src/CMakeFi
 examples/onnxruntime/CMakeFiles/yolov5_detector_onnxruntime.dir/all: examples/CMakeFiles/clean_assets.dir/all
 	$(MAKE) -f examples/onnxruntime/CMakeFiles/yolov5_detector_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/yolov5_detector_onnxruntime.dir/depend
 	$(MAKE) -f examples/onnxruntime/CMakeFiles/yolov5_detector_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/yolov5_detector_onnxruntime.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/build/CMakeFiles --progress-num=16,17 "Built target yolov5_detector_onnxruntime"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/build/CMakeFiles --progress-num=34,35 "Built target yolov5_detector_onnxruntime"
 .PHONY : examples/onnxruntime/CMakeFiles/yolov5_detector_onnxruntime.dir/all
 
 # Build rule for subdir invocation for target.
@@ -276,7 +320,7 @@ examples/onnxruntime/CMakeFiles/pfld_landmarks_onnxruntime.dir/all: src/CMakeFil
 examples/onnxruntime/CMakeFiles/pfld_landmarks_onnxruntime.dir/all: examples/CMakeFiles/clean_assets.dir/all
 	$(MAKE) -f examples/onnxruntime/CMakeFiles/pfld_landmarks_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/pfld_landmarks_onnxruntime.dir/depend
 	$(MAKE) -f examples/onnxruntime/CMakeFiles/pfld_landmarks_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/pfld_landmarks_onnxruntime.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/build/CMakeFiles --progress-num=12,13 "Built target pfld_landmarks_onnxruntime"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/build/CMakeFiles --progress-num=22,23 "Built target pfld_landmarks_onnxruntime"
 .PHONY : examples/onnxruntime/CMakeFiles/pfld_landmarks_onnxruntime.dir/all
 
 # Build rule for subdir invocation for target.
@@ -304,7 +348,7 @@ examples/onnxruntime/CMakeFiles/gender_googlenet_onnxruntime.dir/all: src/CMakeF
 examples/onnxruntime/CMakeFiles/gender_googlenet_onnxruntime.dir/all: examples/CMakeFiles/clean_assets.dir/all
 	$(MAKE) -f examples/onnxruntime/CMakeFiles/gender_googlenet_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/gender_googlenet_onnxruntime.dir/depend
 	$(MAKE) -f examples/onnxruntime/CMakeFiles/gender_googlenet_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/gender_googlenet_onnxruntime.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/build/CMakeFiles --progress-num=8,9 "Built target gender_googlenet_onnxruntime"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/build/CMakeFiles --progress-num=16,17 "Built target gender_googlenet_onnxruntime"
 .PHONY : examples/onnxruntime/CMakeFiles/gender_googlenet_onnxruntime.dir/all
 
 # Build rule for subdir invocation for target.
@@ -332,7 +376,7 @@ examples/onnxruntime/CMakeFiles/ultraface_detector_onnxruntime.dir/all: src/CMak
 examples/onnxruntime/CMakeFiles/ultraface_detector_onnxruntime.dir/all: examples/CMakeFiles/clean_assets.dir/all
 	$(MAKE) -f examples/onnxruntime/CMakeFiles/ultraface_detector_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/ultraface_detector_onnxruntime.dir/depend
 	$(MAKE) -f examples/onnxruntime/CMakeFiles/ultraface_detector_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/ultraface_detector_onnxruntime.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/build/CMakeFiles --progress-num=14,15 "Built target ultraface_detector_onnxruntime"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/build/CMakeFiles --progress-num=30,31 "Built target ultraface_detector_onnxruntime"
 .PHONY : examples/onnxruntime/CMakeFiles/ultraface_detector_onnxruntime.dir/all
 
 # Build rule for subdir invocation for target.
@@ -360,7 +404,7 @@ examples/onnxruntime/CMakeFiles/emotion_ferplus_onnxruntime.dir/all: src/CMakeFi
 examples/onnxruntime/CMakeFiles/emotion_ferplus_onnxruntime.dir/all: examples/CMakeFiles/clean_assets.dir/all
 	$(MAKE) -f examples/onnxruntime/CMakeFiles/emotion_ferplus_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/emotion_ferplus_onnxruntime.dir/depend
 	$(MAKE) -f examples/onnxruntime/CMakeFiles/emotion_ferplus_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/emotion_ferplus_onnxruntime.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/build/CMakeFiles --progress-num=2,3 "Built target emotion_ferplus_onnxruntime"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/build/CMakeFiles --progress-num=4,5 "Built target emotion_ferplus_onnxruntime"
 .PHONY : examples/onnxruntime/CMakeFiles/emotion_ferplus_onnxruntime.dir/all
 
 # Build rule for subdir invocation for target.
@@ -388,7 +432,7 @@ examples/onnxruntime/CMakeFiles/example_onnxruntime.dir/all: src/CMakeFiles/mode
 examples/onnxruntime/CMakeFiles/example_onnxruntime.dir/all: examples/CMakeFiles/clean_assets.dir/all
 	$(MAKE) -f examples/onnxruntime/CMakeFiles/example_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/example_onnxruntime.dir/depend
 	$(MAKE) -f examples/onnxruntime/CMakeFiles/example_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/example_onnxruntime.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/build/CMakeFiles --progress-num=4,5 "Built target example_onnxruntime"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/build/CMakeFiles --progress-num=8,9 "Built target example_onnxruntime"
 .PHONY : examples/onnxruntime/CMakeFiles/example_onnxruntime.dir/all
 
 # Build rule for subdir invocation for target.
@@ -407,6 +451,230 @@ example_onnxruntime: examples/onnxruntime/CMakeFiles/example_onnxruntime.dir/rul
 examples/onnxruntime/CMakeFiles/example_onnxruntime.dir/clean:
 	$(MAKE) -f examples/onnxruntime/CMakeFiles/example_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/example_onnxruntime.dir/clean
 .PHONY : examples/onnxruntime/CMakeFiles/example_onnxruntime.dir/clean
+
+#=============================================================================
+# Target rules for target examples/mnn/CMakeFiles/emotion_ferplus_mnn.dir
+
+# All Build rule for target.
+examples/mnn/CMakeFiles/emotion_ferplus_mnn.dir/all: src/CMakeFiles/model_deploy_dataset_lib.dir/all
+examples/mnn/CMakeFiles/emotion_ferplus_mnn.dir/all: examples/CMakeFiles/clean_assets.dir/all
+	$(MAKE) -f examples/mnn/CMakeFiles/emotion_ferplus_mnn.dir/build.make examples/mnn/CMakeFiles/emotion_ferplus_mnn.dir/depend
+	$(MAKE) -f examples/mnn/CMakeFiles/emotion_ferplus_mnn.dir/build.make examples/mnn/CMakeFiles/emotion_ferplus_mnn.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/build/CMakeFiles --progress-num=2,3 "Built target emotion_ferplus_mnn"
+.PHONY : examples/mnn/CMakeFiles/emotion_ferplus_mnn.dir/all
+
+# Build rule for subdir invocation for target.
+examples/mnn/CMakeFiles/emotion_ferplus_mnn.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /app/build/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 examples/mnn/CMakeFiles/emotion_ferplus_mnn.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /app/build/CMakeFiles 0
+.PHONY : examples/mnn/CMakeFiles/emotion_ferplus_mnn.dir/rule
+
+# Convenience name for target.
+emotion_ferplus_mnn: examples/mnn/CMakeFiles/emotion_ferplus_mnn.dir/rule
+
+.PHONY : emotion_ferplus_mnn
+
+# clean rule for target.
+examples/mnn/CMakeFiles/emotion_ferplus_mnn.dir/clean:
+	$(MAKE) -f examples/mnn/CMakeFiles/emotion_ferplus_mnn.dir/build.make examples/mnn/CMakeFiles/emotion_ferplus_mnn.dir/clean
+.PHONY : examples/mnn/CMakeFiles/emotion_ferplus_mnn.dir/clean
+
+#=============================================================================
+# Target rules for target examples/mnn/CMakeFiles/fsanet_headpose_mnn.dir
+
+# All Build rule for target.
+examples/mnn/CMakeFiles/fsanet_headpose_mnn.dir/all: src/CMakeFiles/model_deploy_dataset_lib.dir/all
+examples/mnn/CMakeFiles/fsanet_headpose_mnn.dir/all: examples/CMakeFiles/clean_assets.dir/all
+	$(MAKE) -f examples/mnn/CMakeFiles/fsanet_headpose_mnn.dir/build.make examples/mnn/CMakeFiles/fsanet_headpose_mnn.dir/depend
+	$(MAKE) -f examples/mnn/CMakeFiles/fsanet_headpose_mnn.dir/build.make examples/mnn/CMakeFiles/fsanet_headpose_mnn.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/build/CMakeFiles --progress-num=10,11 "Built target fsanet_headpose_mnn"
+.PHONY : examples/mnn/CMakeFiles/fsanet_headpose_mnn.dir/all
+
+# Build rule for subdir invocation for target.
+examples/mnn/CMakeFiles/fsanet_headpose_mnn.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /app/build/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 examples/mnn/CMakeFiles/fsanet_headpose_mnn.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /app/build/CMakeFiles 0
+.PHONY : examples/mnn/CMakeFiles/fsanet_headpose_mnn.dir/rule
+
+# Convenience name for target.
+fsanet_headpose_mnn: examples/mnn/CMakeFiles/fsanet_headpose_mnn.dir/rule
+
+.PHONY : fsanet_headpose_mnn
+
+# clean rule for target.
+examples/mnn/CMakeFiles/fsanet_headpose_mnn.dir/clean:
+	$(MAKE) -f examples/mnn/CMakeFiles/fsanet_headpose_mnn.dir/build.make examples/mnn/CMakeFiles/fsanet_headpose_mnn.dir/clean
+.PHONY : examples/mnn/CMakeFiles/fsanet_headpose_mnn.dir/clean
+
+#=============================================================================
+# Target rules for target examples/mnn/CMakeFiles/gender_googlenet_mnn.dir
+
+# All Build rule for target.
+examples/mnn/CMakeFiles/gender_googlenet_mnn.dir/all: src/CMakeFiles/model_deploy_dataset_lib.dir/all
+examples/mnn/CMakeFiles/gender_googlenet_mnn.dir/all: examples/CMakeFiles/clean_assets.dir/all
+	$(MAKE) -f examples/mnn/CMakeFiles/gender_googlenet_mnn.dir/build.make examples/mnn/CMakeFiles/gender_googlenet_mnn.dir/depend
+	$(MAKE) -f examples/mnn/CMakeFiles/gender_googlenet_mnn.dir/build.make examples/mnn/CMakeFiles/gender_googlenet_mnn.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/build/CMakeFiles --progress-num=14,15 "Built target gender_googlenet_mnn"
+.PHONY : examples/mnn/CMakeFiles/gender_googlenet_mnn.dir/all
+
+# Build rule for subdir invocation for target.
+examples/mnn/CMakeFiles/gender_googlenet_mnn.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /app/build/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 examples/mnn/CMakeFiles/gender_googlenet_mnn.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /app/build/CMakeFiles 0
+.PHONY : examples/mnn/CMakeFiles/gender_googlenet_mnn.dir/rule
+
+# Convenience name for target.
+gender_googlenet_mnn: examples/mnn/CMakeFiles/gender_googlenet_mnn.dir/rule
+
+.PHONY : gender_googlenet_mnn
+
+# clean rule for target.
+examples/mnn/CMakeFiles/gender_googlenet_mnn.dir/clean:
+	$(MAKE) -f examples/mnn/CMakeFiles/gender_googlenet_mnn.dir/build.make examples/mnn/CMakeFiles/gender_googlenet_mnn.dir/clean
+.PHONY : examples/mnn/CMakeFiles/gender_googlenet_mnn.dir/clean
+
+#=============================================================================
+# Target rules for target examples/mnn/CMakeFiles/pfld_landmarks_mnn.dir
+
+# All Build rule for target.
+examples/mnn/CMakeFiles/pfld_landmarks_mnn.dir/all: src/CMakeFiles/model_deploy_dataset_lib.dir/all
+examples/mnn/CMakeFiles/pfld_landmarks_mnn.dir/all: examples/CMakeFiles/clean_assets.dir/all
+	$(MAKE) -f examples/mnn/CMakeFiles/pfld_landmarks_mnn.dir/build.make examples/mnn/CMakeFiles/pfld_landmarks_mnn.dir/depend
+	$(MAKE) -f examples/mnn/CMakeFiles/pfld_landmarks_mnn.dir/build.make examples/mnn/CMakeFiles/pfld_landmarks_mnn.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/build/CMakeFiles --progress-num=20,21 "Built target pfld_landmarks_mnn"
+.PHONY : examples/mnn/CMakeFiles/pfld_landmarks_mnn.dir/all
+
+# Build rule for subdir invocation for target.
+examples/mnn/CMakeFiles/pfld_landmarks_mnn.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /app/build/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 examples/mnn/CMakeFiles/pfld_landmarks_mnn.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /app/build/CMakeFiles 0
+.PHONY : examples/mnn/CMakeFiles/pfld_landmarks_mnn.dir/rule
+
+# Convenience name for target.
+pfld_landmarks_mnn: examples/mnn/CMakeFiles/pfld_landmarks_mnn.dir/rule
+
+.PHONY : pfld_landmarks_mnn
+
+# clean rule for target.
+examples/mnn/CMakeFiles/pfld_landmarks_mnn.dir/clean:
+	$(MAKE) -f examples/mnn/CMakeFiles/pfld_landmarks_mnn.dir/build.make examples/mnn/CMakeFiles/pfld_landmarks_mnn.dir/clean
+.PHONY : examples/mnn/CMakeFiles/pfld_landmarks_mnn.dir/clean
+
+#=============================================================================
+# Target rules for target examples/mnn/CMakeFiles/ultraface_detector_mnn.dir
+
+# All Build rule for target.
+examples/mnn/CMakeFiles/ultraface_detector_mnn.dir/all: src/CMakeFiles/model_deploy_dataset_lib.dir/all
+examples/mnn/CMakeFiles/ultraface_detector_mnn.dir/all: examples/CMakeFiles/clean_assets.dir/all
+	$(MAKE) -f examples/mnn/CMakeFiles/ultraface_detector_mnn.dir/build.make examples/mnn/CMakeFiles/ultraface_detector_mnn.dir/depend
+	$(MAKE) -f examples/mnn/CMakeFiles/ultraface_detector_mnn.dir/build.make examples/mnn/CMakeFiles/ultraface_detector_mnn.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/build/CMakeFiles --progress-num=28,29 "Built target ultraface_detector_mnn"
+.PHONY : examples/mnn/CMakeFiles/ultraface_detector_mnn.dir/all
+
+# Build rule for subdir invocation for target.
+examples/mnn/CMakeFiles/ultraface_detector_mnn.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /app/build/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 examples/mnn/CMakeFiles/ultraface_detector_mnn.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /app/build/CMakeFiles 0
+.PHONY : examples/mnn/CMakeFiles/ultraface_detector_mnn.dir/rule
+
+# Convenience name for target.
+ultraface_detector_mnn: examples/mnn/CMakeFiles/ultraface_detector_mnn.dir/rule
+
+.PHONY : ultraface_detector_mnn
+
+# clean rule for target.
+examples/mnn/CMakeFiles/ultraface_detector_mnn.dir/clean:
+	$(MAKE) -f examples/mnn/CMakeFiles/ultraface_detector_mnn.dir/build.make examples/mnn/CMakeFiles/ultraface_detector_mnn.dir/clean
+.PHONY : examples/mnn/CMakeFiles/ultraface_detector_mnn.dir/clean
+
+#=============================================================================
+# Target rules for target examples/mnn/CMakeFiles/ssrnet_age_mnn.dir
+
+# All Build rule for target.
+examples/mnn/CMakeFiles/ssrnet_age_mnn.dir/all: src/CMakeFiles/model_deploy_dataset_lib.dir/all
+examples/mnn/CMakeFiles/ssrnet_age_mnn.dir/all: examples/CMakeFiles/clean_assets.dir/all
+	$(MAKE) -f examples/mnn/CMakeFiles/ssrnet_age_mnn.dir/build.make examples/mnn/CMakeFiles/ssrnet_age_mnn.dir/depend
+	$(MAKE) -f examples/mnn/CMakeFiles/ssrnet_age_mnn.dir/build.make examples/mnn/CMakeFiles/ssrnet_age_mnn.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/build/CMakeFiles --progress-num=24,25 "Built target ssrnet_age_mnn"
+.PHONY : examples/mnn/CMakeFiles/ssrnet_age_mnn.dir/all
+
+# Build rule for subdir invocation for target.
+examples/mnn/CMakeFiles/ssrnet_age_mnn.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /app/build/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 examples/mnn/CMakeFiles/ssrnet_age_mnn.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /app/build/CMakeFiles 0
+.PHONY : examples/mnn/CMakeFiles/ssrnet_age_mnn.dir/rule
+
+# Convenience name for target.
+ssrnet_age_mnn: examples/mnn/CMakeFiles/ssrnet_age_mnn.dir/rule
+
+.PHONY : ssrnet_age_mnn
+
+# clean rule for target.
+examples/mnn/CMakeFiles/ssrnet_age_mnn.dir/clean:
+	$(MAKE) -f examples/mnn/CMakeFiles/ssrnet_age_mnn.dir/build.make examples/mnn/CMakeFiles/ssrnet_age_mnn.dir/clean
+.PHONY : examples/mnn/CMakeFiles/ssrnet_age_mnn.dir/clean
+
+#=============================================================================
+# Target rules for target examples/mnn/CMakeFiles/yolov5_detector_mnn.dir
+
+# All Build rule for target.
+examples/mnn/CMakeFiles/yolov5_detector_mnn.dir/all: src/CMakeFiles/model_deploy_dataset_lib.dir/all
+examples/mnn/CMakeFiles/yolov5_detector_mnn.dir/all: examples/CMakeFiles/clean_assets.dir/all
+	$(MAKE) -f examples/mnn/CMakeFiles/yolov5_detector_mnn.dir/build.make examples/mnn/CMakeFiles/yolov5_detector_mnn.dir/depend
+	$(MAKE) -f examples/mnn/CMakeFiles/yolov5_detector_mnn.dir/build.make examples/mnn/CMakeFiles/yolov5_detector_mnn.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/build/CMakeFiles --progress-num=32,33 "Built target yolov5_detector_mnn"
+.PHONY : examples/mnn/CMakeFiles/yolov5_detector_mnn.dir/all
+
+# Build rule for subdir invocation for target.
+examples/mnn/CMakeFiles/yolov5_detector_mnn.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /app/build/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 examples/mnn/CMakeFiles/yolov5_detector_mnn.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /app/build/CMakeFiles 0
+.PHONY : examples/mnn/CMakeFiles/yolov5_detector_mnn.dir/rule
+
+# Convenience name for target.
+yolov5_detector_mnn: examples/mnn/CMakeFiles/yolov5_detector_mnn.dir/rule
+
+.PHONY : yolov5_detector_mnn
+
+# clean rule for target.
+examples/mnn/CMakeFiles/yolov5_detector_mnn.dir/clean:
+	$(MAKE) -f examples/mnn/CMakeFiles/yolov5_detector_mnn.dir/build.make examples/mnn/CMakeFiles/yolov5_detector_mnn.dir/clean
+.PHONY : examples/mnn/CMakeFiles/yolov5_detector_mnn.dir/clean
+
+#=============================================================================
+# Target rules for target examples/mnn/CMakeFiles/example_mnn.dir
+
+# All Build rule for target.
+examples/mnn/CMakeFiles/example_mnn.dir/all: src/CMakeFiles/model_deploy_dataset_lib.dir/all
+examples/mnn/CMakeFiles/example_mnn.dir/all: examples/CMakeFiles/clean_assets.dir/all
+	$(MAKE) -f examples/mnn/CMakeFiles/example_mnn.dir/build.make examples/mnn/CMakeFiles/example_mnn.dir/depend
+	$(MAKE) -f examples/mnn/CMakeFiles/example_mnn.dir/build.make examples/mnn/CMakeFiles/example_mnn.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/app/build/CMakeFiles --progress-num=6,7 "Built target example_mnn"
+.PHONY : examples/mnn/CMakeFiles/example_mnn.dir/all
+
+# Build rule for subdir invocation for target.
+examples/mnn/CMakeFiles/example_mnn.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /app/build/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 examples/mnn/CMakeFiles/example_mnn.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /app/build/CMakeFiles 0
+.PHONY : examples/mnn/CMakeFiles/example_mnn.dir/rule
+
+# Convenience name for target.
+example_mnn: examples/mnn/CMakeFiles/example_mnn.dir/rule
+
+.PHONY : example_mnn
+
+# clean rule for target.
+examples/mnn/CMakeFiles/example_mnn.dir/clean:
+	$(MAKE) -f examples/mnn/CMakeFiles/example_mnn.dir/build.make examples/mnn/CMakeFiles/example_mnn.dir/clean
+.PHONY : examples/mnn/CMakeFiles/example_mnn.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
