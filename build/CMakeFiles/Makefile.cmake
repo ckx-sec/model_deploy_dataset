@@ -15,10 +15,12 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../cmake/ncnn.cmake"
   "../cmake/onnxruntime.cmake"
   "../cmake/opencv.cmake"
+  "../cmake/tnn.cmake"
   "../examples/CMakeLists.txt"
   "../examples/mnn/CMakeLists.txt"
   "../examples/ncnn/CMakeLists.txt"
   "../examples/onnxruntime/CMakeLists.txt"
+  "../examples/tnn/CMakeLists.txt"
   "../src/CMakeLists.txt"
   "/usr/lib/aarch64-linux-gnu/cmake/opencv4/OpenCVConfig-version.cmake"
   "/usr/lib/aarch64-linux-gnu/cmake/opencv4/OpenCVConfig.cmake"
@@ -61,6 +63,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "examples/onnxruntime/CMakeFiles/CMakeDirectoryInformation.cmake"
   "examples/mnn/CMakeFiles/CMakeDirectoryInformation.cmake"
   "examples/ncnn/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "examples/tnn/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -90,4 +93,11 @@ set(CMAKE_DEPEND_INFO_FILES
   "examples/ncnn/CMakeFiles/yolov5_detector_ncnn.dir/DependInfo.cmake"
   "examples/ncnn/CMakeFiles/pfld_landmarks_ncnn.dir/DependInfo.cmake"
   "examples/ncnn/CMakeFiles/ultraface_detector_ncnn.dir/DependInfo.cmake"
+  "examples/tnn/CMakeFiles/ultraface_detector_tnn.dir/DependInfo.cmake"
+  "examples/tnn/CMakeFiles/ssrnet_age_tnn.dir/DependInfo.cmake"
+  "examples/tnn/CMakeFiles/yolov5_detector_tnn.dir/DependInfo.cmake"
+  "examples/tnn/CMakeFiles/gender_googlenet_tnn.dir/DependInfo.cmake"
+  "examples/tnn/CMakeFiles/fsanet_headpose_tnn.dir/DependInfo.cmake"
+  "examples/tnn/CMakeFiles/pfld_landmarks_tnn.dir/DependInfo.cmake"
+  "examples/tnn/CMakeFiles/emotion_ferplus_tnn.dir/DependInfo.cmake"
   )

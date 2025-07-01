@@ -1,6 +1,7 @@
 add_subdirectory(onnxruntime)
 add_subdirectory(mnn)
 add_subdirectory(ncnn)
+add_subdirectory(tnn)
 
 # Copy assets to the build directory
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)

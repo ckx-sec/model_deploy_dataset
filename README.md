@@ -40,3 +40,36 @@ The main goal is to provide a unified C++ API for different inference engines an
 - [ ] 完善 TNN 支持
 - [ ] 丰富更多模型和后处理
 - [ ] Python/C API 封装 
+
+# TNN Demo 使用说明
+
+本目录下 tnn demo（yolov5、ultraface、pfld、gender、emotion、ssrnet、fsanet）均为**原生 TNN C++ API 实现**，不依赖 lite.ai.toolkit。
+
+## 运行方法
+
+```bash
+# 以 yolov5 为例
+./yolov5_detector_tnn yolov5.tnnproto yolov5.tnnmodel test.jpg
+```
+- 其它 demo 用法类似，参数依次为 proto/model/image。
+
+## 支持模型
+- yolov5
+- ultraface
+- pfld
+- gender_googlenet
+- emotion_ferplus
+- ssrnet
+- fsanet
+
+## 依赖
+- OpenCV
+- TNN 官方 C++ 头文件与 so
+
+## 测试方法
+- 推荐配合 assets 目录下测试图片与模型。
+- 输出结果为控制台打印或图片保存（如有后处理）。
+
+## 注意事项
+- 需先将 onnx 模型转换为 tnnproto/tnnmodel 格式。
+- demo 代码结构清晰，便于二次开发。 
