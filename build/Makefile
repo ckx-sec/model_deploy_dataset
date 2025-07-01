@@ -344,6 +344,97 @@ example_mnn/fast:
 	$(MAKE) -f examples/mnn/CMakeFiles/example_mnn.dir/build.make examples/mnn/CMakeFiles/example_mnn.dir/build
 .PHONY : example_mnn/fast
 
+#=============================================================================
+# Target rules for targets named ssrnet_age_ncnn
+
+# Build rule for target.
+ssrnet_age_ncnn: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ssrnet_age_ncnn
+.PHONY : ssrnet_age_ncnn
+
+# fast build rule for target.
+ssrnet_age_ncnn/fast:
+	$(MAKE) -f examples/ncnn/CMakeFiles/ssrnet_age_ncnn.dir/build.make examples/ncnn/CMakeFiles/ssrnet_age_ncnn.dir/build
+.PHONY : ssrnet_age_ncnn/fast
+
+#=============================================================================
+# Target rules for targets named emotion_ferplus_ncnn
+
+# Build rule for target.
+emotion_ferplus_ncnn: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 emotion_ferplus_ncnn
+.PHONY : emotion_ferplus_ncnn
+
+# fast build rule for target.
+emotion_ferplus_ncnn/fast:
+	$(MAKE) -f examples/ncnn/CMakeFiles/emotion_ferplus_ncnn.dir/build.make examples/ncnn/CMakeFiles/emotion_ferplus_ncnn.dir/build
+.PHONY : emotion_ferplus_ncnn/fast
+
+#=============================================================================
+# Target rules for targets named gender_googlenet_ncnn
+
+# Build rule for target.
+gender_googlenet_ncnn: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gender_googlenet_ncnn
+.PHONY : gender_googlenet_ncnn
+
+# fast build rule for target.
+gender_googlenet_ncnn/fast:
+	$(MAKE) -f examples/ncnn/CMakeFiles/gender_googlenet_ncnn.dir/build.make examples/ncnn/CMakeFiles/gender_googlenet_ncnn.dir/build
+.PHONY : gender_googlenet_ncnn/fast
+
+#=============================================================================
+# Target rules for targets named fsanet_headpose_ncnn
+
+# Build rule for target.
+fsanet_headpose_ncnn: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 fsanet_headpose_ncnn
+.PHONY : fsanet_headpose_ncnn
+
+# fast build rule for target.
+fsanet_headpose_ncnn/fast:
+	$(MAKE) -f examples/ncnn/CMakeFiles/fsanet_headpose_ncnn.dir/build.make examples/ncnn/CMakeFiles/fsanet_headpose_ncnn.dir/build
+.PHONY : fsanet_headpose_ncnn/fast
+
+#=============================================================================
+# Target rules for targets named yolov5_detector_ncnn
+
+# Build rule for target.
+yolov5_detector_ncnn: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 yolov5_detector_ncnn
+.PHONY : yolov5_detector_ncnn
+
+# fast build rule for target.
+yolov5_detector_ncnn/fast:
+	$(MAKE) -f examples/ncnn/CMakeFiles/yolov5_detector_ncnn.dir/build.make examples/ncnn/CMakeFiles/yolov5_detector_ncnn.dir/build
+.PHONY : yolov5_detector_ncnn/fast
+
+#=============================================================================
+# Target rules for targets named pfld_landmarks_ncnn
+
+# Build rule for target.
+pfld_landmarks_ncnn: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pfld_landmarks_ncnn
+.PHONY : pfld_landmarks_ncnn
+
+# fast build rule for target.
+pfld_landmarks_ncnn/fast:
+	$(MAKE) -f examples/ncnn/CMakeFiles/pfld_landmarks_ncnn.dir/build.make examples/ncnn/CMakeFiles/pfld_landmarks_ncnn.dir/build
+.PHONY : pfld_landmarks_ncnn/fast
+
+#=============================================================================
+# Target rules for targets named ultraface_detector_ncnn
+
+# Build rule for target.
+ultraface_detector_ncnn: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ultraface_detector_ncnn
+.PHONY : ultraface_detector_ncnn
+
+# fast build rule for target.
+ultraface_detector_ncnn/fast:
+	$(MAKE) -f examples/ncnn/CMakeFiles/ultraface_detector_ncnn.dir/build.make examples/ncnn/CMakeFiles/ultraface_detector_ncnn.dir/build
+.PHONY : ultraface_detector_ncnn/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -370,6 +461,13 @@ help:
 	@echo "... ssrnet_age_mnn"
 	@echo "... yolov5_detector_mnn"
 	@echo "... example_mnn"
+	@echo "... ssrnet_age_ncnn"
+	@echo "... emotion_ferplus_ncnn"
+	@echo "... gender_googlenet_ncnn"
+	@echo "... fsanet_headpose_ncnn"
+	@echo "... yolov5_detector_ncnn"
+	@echo "... pfld_landmarks_ncnn"
+	@echo "... ultraface_detector_ncnn"
 .PHONY : help
 
 

@@ -12,10 +12,12 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.16.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeSystem.cmake"
   "../cmake/mnn.cmake"
+  "../cmake/ncnn.cmake"
   "../cmake/onnxruntime.cmake"
   "../cmake/opencv.cmake"
   "../examples/CMakeLists.txt"
   "../examples/mnn/CMakeLists.txt"
+  "../examples/ncnn/CMakeLists.txt"
   "../examples/onnxruntime/CMakeLists.txt"
   "../src/CMakeLists.txt"
   "/usr/lib/aarch64-linux-gnu/cmake/opencv4/OpenCVConfig-version.cmake"
@@ -58,6 +60,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "examples/CMakeFiles/CMakeDirectoryInformation.cmake"
   "examples/onnxruntime/CMakeFiles/CMakeDirectoryInformation.cmake"
   "examples/mnn/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "examples/ncnn/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -80,4 +83,11 @@ set(CMAKE_DEPEND_INFO_FILES
   "examples/mnn/CMakeFiles/ssrnet_age_mnn.dir/DependInfo.cmake"
   "examples/mnn/CMakeFiles/yolov5_detector_mnn.dir/DependInfo.cmake"
   "examples/mnn/CMakeFiles/example_mnn.dir/DependInfo.cmake"
+  "examples/ncnn/CMakeFiles/ssrnet_age_ncnn.dir/DependInfo.cmake"
+  "examples/ncnn/CMakeFiles/emotion_ferplus_ncnn.dir/DependInfo.cmake"
+  "examples/ncnn/CMakeFiles/gender_googlenet_ncnn.dir/DependInfo.cmake"
+  "examples/ncnn/CMakeFiles/fsanet_headpose_ncnn.dir/DependInfo.cmake"
+  "examples/ncnn/CMakeFiles/yolov5_detector_ncnn.dir/DependInfo.cmake"
+  "examples/ncnn/CMakeFiles/pfld_landmarks_ncnn.dir/DependInfo.cmake"
+  "examples/ncnn/CMakeFiles/ultraface_detector_ncnn.dir/DependInfo.cmake"
   )

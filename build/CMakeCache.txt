@@ -216,7 +216,7 @@ MEI_BUILD_EXAMPLES:BOOL=ON
 MEI_ENABLE_MNN:BOOL=ON
 
 //Enable NCNN backend
-MEI_ENABLE_NCNN:BOOL=OFF
+MEI_ENABLE_NCNN:BOOL=ON
 
 //Enable ONNXRuntime backend
 MEI_ENABLE_ONNXRUNTIME:BOOL=ON
@@ -226,6 +226,9 @@ MEI_ENABLE_TNN:BOOL=OFF
 
 //Path to a library.
 MNN_LIBRARY:FILEPATH=/app/third_party/mnn/lib/libMNN.so
+
+//Path to a library.
+NCNN_LIBRARY:FILEPATH=/app/third_party/ncnn/lib/libncnn.so
 
 //Path to a file.
 ONNXRUNTIME_INCLUDE_DIR:PATH=/app/third_party/onnxruntime/include
@@ -347,7 +350,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

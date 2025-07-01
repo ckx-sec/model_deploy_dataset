@@ -9,7 +9,7 @@ message(STATUS "Building multi_engine_inference")
 # --- Options to enable/disable backends ---
 option(MEI_ENABLE_ONNXRUNTIME "Enable ONNXRuntime backend" ON)
 option(MEI_ENABLE_MNN "Enable MNN backend" OFF)
-option(MEI_ENABLE_NCNN "Enable NCNN backend" OFF)
+option(MEI_ENABLE_NCNN "Enable NCNN backend" ON)
 option(MEI_ENABLE_TNN "Enable TNN backend" OFF)
 option(MEI_BUILD_EXAMPLES "Build example applications" ON)
 
@@ -22,6 +22,9 @@ if(MEI_ENABLE_ONNXRUNTIME)
 endif()
 if(MEI_ENABLE_MNN)
     include(mnn)
+endif()
+if(MEI_ENABLE_NCNN)
+    include(ncnn)
 endif()
 # We always need OpenCV for the examples for now
 include(opencv)
