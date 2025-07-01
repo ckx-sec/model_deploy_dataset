@@ -14,8 +14,8 @@ add_custom_target(clean_assets
     COMMENT "Remove copied assets directory after build"
 )
 
-# 将 clean_assets 集成到所有 example 可执行文件的 POST_BUILD 步骤
-set(EXAMPLE_TARGETS example ultraface_detector yolov5_detector pfld_landmarks fsanet_headpose gender_googlenet emotion_ferplus)
+# 将 clean_assets 集成到所有 onnxruntime example 可执行文件的 POST_BUILD 步骤
+set(EXAMPLE_TARGETS example_onnxruntime ultraface_detector_onnxruntime yolov5_detector_onnxruntime pfld_landmarks_onnxruntime fsanet_headpose_onnxruntime gender_googlenet_onnxruntime emotion_ferplus_onnxruntime)
 foreach(target ${EXAMPLE_TARGETS})
     add_dependencies(${target} clean_assets)
 endforeach() 

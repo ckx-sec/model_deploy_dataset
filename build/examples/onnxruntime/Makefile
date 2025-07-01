@@ -111,109 +111,109 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-examples/onnxruntime/CMakeFiles/gender_googlenet.dir/rule:
-	cd /app/build && $(MAKE) -f CMakeFiles/Makefile2 examples/onnxruntime/CMakeFiles/gender_googlenet.dir/rule
-.PHONY : examples/onnxruntime/CMakeFiles/gender_googlenet.dir/rule
+examples/onnxruntime/CMakeFiles/fsanet_headpose_onnxruntime.dir/rule:
+	cd /app/build && $(MAKE) -f CMakeFiles/Makefile2 examples/onnxruntime/CMakeFiles/fsanet_headpose_onnxruntime.dir/rule
+.PHONY : examples/onnxruntime/CMakeFiles/fsanet_headpose_onnxruntime.dir/rule
 
 # Convenience name for target.
-gender_googlenet: examples/onnxruntime/CMakeFiles/gender_googlenet.dir/rule
+fsanet_headpose_onnxruntime: examples/onnxruntime/CMakeFiles/fsanet_headpose_onnxruntime.dir/rule
 
-.PHONY : gender_googlenet
+.PHONY : fsanet_headpose_onnxruntime
 
 # fast build rule for target.
-gender_googlenet/fast:
-	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/gender_googlenet.dir/build.make examples/onnxruntime/CMakeFiles/gender_googlenet.dir/build
-.PHONY : gender_googlenet/fast
+fsanet_headpose_onnxruntime/fast:
+	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/fsanet_headpose_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/fsanet_headpose_onnxruntime.dir/build
+.PHONY : fsanet_headpose_onnxruntime/fast
 
 # Convenience name for target.
-examples/onnxruntime/CMakeFiles/emotion_ferplus.dir/rule:
-	cd /app/build && $(MAKE) -f CMakeFiles/Makefile2 examples/onnxruntime/CMakeFiles/emotion_ferplus.dir/rule
-.PHONY : examples/onnxruntime/CMakeFiles/emotion_ferplus.dir/rule
+examples/onnxruntime/CMakeFiles/yolov5_detector_onnxruntime.dir/rule:
+	cd /app/build && $(MAKE) -f CMakeFiles/Makefile2 examples/onnxruntime/CMakeFiles/yolov5_detector_onnxruntime.dir/rule
+.PHONY : examples/onnxruntime/CMakeFiles/yolov5_detector_onnxruntime.dir/rule
 
 # Convenience name for target.
-emotion_ferplus: examples/onnxruntime/CMakeFiles/emotion_ferplus.dir/rule
+yolov5_detector_onnxruntime: examples/onnxruntime/CMakeFiles/yolov5_detector_onnxruntime.dir/rule
 
-.PHONY : emotion_ferplus
+.PHONY : yolov5_detector_onnxruntime
 
 # fast build rule for target.
-emotion_ferplus/fast:
-	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/emotion_ferplus.dir/build.make examples/onnxruntime/CMakeFiles/emotion_ferplus.dir/build
-.PHONY : emotion_ferplus/fast
+yolov5_detector_onnxruntime/fast:
+	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/yolov5_detector_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/yolov5_detector_onnxruntime.dir/build
+.PHONY : yolov5_detector_onnxruntime/fast
 
 # Convenience name for target.
-examples/onnxruntime/CMakeFiles/pfld_landmarks.dir/rule:
-	cd /app/build && $(MAKE) -f CMakeFiles/Makefile2 examples/onnxruntime/CMakeFiles/pfld_landmarks.dir/rule
-.PHONY : examples/onnxruntime/CMakeFiles/pfld_landmarks.dir/rule
+examples/onnxruntime/CMakeFiles/pfld_landmarks_onnxruntime.dir/rule:
+	cd /app/build && $(MAKE) -f CMakeFiles/Makefile2 examples/onnxruntime/CMakeFiles/pfld_landmarks_onnxruntime.dir/rule
+.PHONY : examples/onnxruntime/CMakeFiles/pfld_landmarks_onnxruntime.dir/rule
 
 # Convenience name for target.
-pfld_landmarks: examples/onnxruntime/CMakeFiles/pfld_landmarks.dir/rule
+pfld_landmarks_onnxruntime: examples/onnxruntime/CMakeFiles/pfld_landmarks_onnxruntime.dir/rule
 
-.PHONY : pfld_landmarks
+.PHONY : pfld_landmarks_onnxruntime
 
 # fast build rule for target.
-pfld_landmarks/fast:
-	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/pfld_landmarks.dir/build.make examples/onnxruntime/CMakeFiles/pfld_landmarks.dir/build
-.PHONY : pfld_landmarks/fast
+pfld_landmarks_onnxruntime/fast:
+	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/pfld_landmarks_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/pfld_landmarks_onnxruntime.dir/build
+.PHONY : pfld_landmarks_onnxruntime/fast
 
 # Convenience name for target.
-examples/onnxruntime/CMakeFiles/yolov5_detector.dir/rule:
-	cd /app/build && $(MAKE) -f CMakeFiles/Makefile2 examples/onnxruntime/CMakeFiles/yolov5_detector.dir/rule
-.PHONY : examples/onnxruntime/CMakeFiles/yolov5_detector.dir/rule
+examples/onnxruntime/CMakeFiles/gender_googlenet_onnxruntime.dir/rule:
+	cd /app/build && $(MAKE) -f CMakeFiles/Makefile2 examples/onnxruntime/CMakeFiles/gender_googlenet_onnxruntime.dir/rule
+.PHONY : examples/onnxruntime/CMakeFiles/gender_googlenet_onnxruntime.dir/rule
 
 # Convenience name for target.
-yolov5_detector: examples/onnxruntime/CMakeFiles/yolov5_detector.dir/rule
+gender_googlenet_onnxruntime: examples/onnxruntime/CMakeFiles/gender_googlenet_onnxruntime.dir/rule
 
-.PHONY : yolov5_detector
+.PHONY : gender_googlenet_onnxruntime
 
 # fast build rule for target.
-yolov5_detector/fast:
-	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/yolov5_detector.dir/build.make examples/onnxruntime/CMakeFiles/yolov5_detector.dir/build
-.PHONY : yolov5_detector/fast
+gender_googlenet_onnxruntime/fast:
+	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/gender_googlenet_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/gender_googlenet_onnxruntime.dir/build
+.PHONY : gender_googlenet_onnxruntime/fast
 
 # Convenience name for target.
-examples/onnxruntime/CMakeFiles/ultraface_detector.dir/rule:
-	cd /app/build && $(MAKE) -f CMakeFiles/Makefile2 examples/onnxruntime/CMakeFiles/ultraface_detector.dir/rule
-.PHONY : examples/onnxruntime/CMakeFiles/ultraface_detector.dir/rule
+examples/onnxruntime/CMakeFiles/ultraface_detector_onnxruntime.dir/rule:
+	cd /app/build && $(MAKE) -f CMakeFiles/Makefile2 examples/onnxruntime/CMakeFiles/ultraface_detector_onnxruntime.dir/rule
+.PHONY : examples/onnxruntime/CMakeFiles/ultraface_detector_onnxruntime.dir/rule
 
 # Convenience name for target.
-ultraface_detector: examples/onnxruntime/CMakeFiles/ultraface_detector.dir/rule
+ultraface_detector_onnxruntime: examples/onnxruntime/CMakeFiles/ultraface_detector_onnxruntime.dir/rule
 
-.PHONY : ultraface_detector
+.PHONY : ultraface_detector_onnxruntime
 
 # fast build rule for target.
-ultraface_detector/fast:
-	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/ultraface_detector.dir/build.make examples/onnxruntime/CMakeFiles/ultraface_detector.dir/build
-.PHONY : ultraface_detector/fast
+ultraface_detector_onnxruntime/fast:
+	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/ultraface_detector_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/ultraface_detector_onnxruntime.dir/build
+.PHONY : ultraface_detector_onnxruntime/fast
 
 # Convenience name for target.
-examples/onnxruntime/CMakeFiles/fsanet_headpose.dir/rule:
-	cd /app/build && $(MAKE) -f CMakeFiles/Makefile2 examples/onnxruntime/CMakeFiles/fsanet_headpose.dir/rule
-.PHONY : examples/onnxruntime/CMakeFiles/fsanet_headpose.dir/rule
+examples/onnxruntime/CMakeFiles/emotion_ferplus_onnxruntime.dir/rule:
+	cd /app/build && $(MAKE) -f CMakeFiles/Makefile2 examples/onnxruntime/CMakeFiles/emotion_ferplus_onnxruntime.dir/rule
+.PHONY : examples/onnxruntime/CMakeFiles/emotion_ferplus_onnxruntime.dir/rule
 
 # Convenience name for target.
-fsanet_headpose: examples/onnxruntime/CMakeFiles/fsanet_headpose.dir/rule
+emotion_ferplus_onnxruntime: examples/onnxruntime/CMakeFiles/emotion_ferplus_onnxruntime.dir/rule
 
-.PHONY : fsanet_headpose
+.PHONY : emotion_ferplus_onnxruntime
 
 # fast build rule for target.
-fsanet_headpose/fast:
-	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/fsanet_headpose.dir/build.make examples/onnxruntime/CMakeFiles/fsanet_headpose.dir/build
-.PHONY : fsanet_headpose/fast
+emotion_ferplus_onnxruntime/fast:
+	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/emotion_ferplus_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/emotion_ferplus_onnxruntime.dir/build
+.PHONY : emotion_ferplus_onnxruntime/fast
 
 # Convenience name for target.
-examples/onnxruntime/CMakeFiles/example.dir/rule:
-	cd /app/build && $(MAKE) -f CMakeFiles/Makefile2 examples/onnxruntime/CMakeFiles/example.dir/rule
-.PHONY : examples/onnxruntime/CMakeFiles/example.dir/rule
+examples/onnxruntime/CMakeFiles/example_onnxruntime.dir/rule:
+	cd /app/build && $(MAKE) -f CMakeFiles/Makefile2 examples/onnxruntime/CMakeFiles/example_onnxruntime.dir/rule
+.PHONY : examples/onnxruntime/CMakeFiles/example_onnxruntime.dir/rule
 
 # Convenience name for target.
-example: examples/onnxruntime/CMakeFiles/example.dir/rule
+example_onnxruntime: examples/onnxruntime/CMakeFiles/example_onnxruntime.dir/rule
 
-.PHONY : example
+.PHONY : example_onnxruntime
 
 # fast build rule for target.
-example/fast:
-	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/example.dir/build.make examples/onnxruntime/CMakeFiles/example.dir/build
-.PHONY : example/fast
+example_onnxruntime/fast:
+	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/example_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/example_onnxruntime.dir/build
+.PHONY : example_onnxruntime/fast
 
 emotion_ferplus.o: emotion_ferplus.cpp.o
 
@@ -221,7 +221,7 @@ emotion_ferplus.o: emotion_ferplus.cpp.o
 
 # target to build an object file
 emotion_ferplus.cpp.o:
-	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/emotion_ferplus.dir/build.make examples/onnxruntime/CMakeFiles/emotion_ferplus.dir/emotion_ferplus.cpp.o
+	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/emotion_ferplus_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/emotion_ferplus_onnxruntime.dir/emotion_ferplus.cpp.o
 .PHONY : emotion_ferplus.cpp.o
 
 emotion_ferplus.i: emotion_ferplus.cpp.i
@@ -230,7 +230,7 @@ emotion_ferplus.i: emotion_ferplus.cpp.i
 
 # target to preprocess a source file
 emotion_ferplus.cpp.i:
-	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/emotion_ferplus.dir/build.make examples/onnxruntime/CMakeFiles/emotion_ferplus.dir/emotion_ferplus.cpp.i
+	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/emotion_ferplus_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/emotion_ferplus_onnxruntime.dir/emotion_ferplus.cpp.i
 .PHONY : emotion_ferplus.cpp.i
 
 emotion_ferplus.s: emotion_ferplus.cpp.s
@@ -239,7 +239,7 @@ emotion_ferplus.s: emotion_ferplus.cpp.s
 
 # target to generate assembly for a file
 emotion_ferplus.cpp.s:
-	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/emotion_ferplus.dir/build.make examples/onnxruntime/CMakeFiles/emotion_ferplus.dir/emotion_ferplus.cpp.s
+	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/emotion_ferplus_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/emotion_ferplus_onnxruntime.dir/emotion_ferplus.cpp.s
 .PHONY : emotion_ferplus.cpp.s
 
 example.o: example.cpp.o
@@ -248,7 +248,7 @@ example.o: example.cpp.o
 
 # target to build an object file
 example.cpp.o:
-	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/example.dir/build.make examples/onnxruntime/CMakeFiles/example.dir/example.cpp.o
+	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/example_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/example_onnxruntime.dir/example.cpp.o
 .PHONY : example.cpp.o
 
 example.i: example.cpp.i
@@ -257,7 +257,7 @@ example.i: example.cpp.i
 
 # target to preprocess a source file
 example.cpp.i:
-	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/example.dir/build.make examples/onnxruntime/CMakeFiles/example.dir/example.cpp.i
+	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/example_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/example_onnxruntime.dir/example.cpp.i
 .PHONY : example.cpp.i
 
 example.s: example.cpp.s
@@ -266,7 +266,7 @@ example.s: example.cpp.s
 
 # target to generate assembly for a file
 example.cpp.s:
-	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/example.dir/build.make examples/onnxruntime/CMakeFiles/example.dir/example.cpp.s
+	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/example_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/example_onnxruntime.dir/example.cpp.s
 .PHONY : example.cpp.s
 
 fsanet_headpose.o: fsanet_headpose.cpp.o
@@ -275,7 +275,7 @@ fsanet_headpose.o: fsanet_headpose.cpp.o
 
 # target to build an object file
 fsanet_headpose.cpp.o:
-	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/fsanet_headpose.dir/build.make examples/onnxruntime/CMakeFiles/fsanet_headpose.dir/fsanet_headpose.cpp.o
+	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/fsanet_headpose_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/fsanet_headpose_onnxruntime.dir/fsanet_headpose.cpp.o
 .PHONY : fsanet_headpose.cpp.o
 
 fsanet_headpose.i: fsanet_headpose.cpp.i
@@ -284,7 +284,7 @@ fsanet_headpose.i: fsanet_headpose.cpp.i
 
 # target to preprocess a source file
 fsanet_headpose.cpp.i:
-	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/fsanet_headpose.dir/build.make examples/onnxruntime/CMakeFiles/fsanet_headpose.dir/fsanet_headpose.cpp.i
+	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/fsanet_headpose_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/fsanet_headpose_onnxruntime.dir/fsanet_headpose.cpp.i
 .PHONY : fsanet_headpose.cpp.i
 
 fsanet_headpose.s: fsanet_headpose.cpp.s
@@ -293,7 +293,7 @@ fsanet_headpose.s: fsanet_headpose.cpp.s
 
 # target to generate assembly for a file
 fsanet_headpose.cpp.s:
-	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/fsanet_headpose.dir/build.make examples/onnxruntime/CMakeFiles/fsanet_headpose.dir/fsanet_headpose.cpp.s
+	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/fsanet_headpose_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/fsanet_headpose_onnxruntime.dir/fsanet_headpose.cpp.s
 .PHONY : fsanet_headpose.cpp.s
 
 gender_googlenet.o: gender_googlenet.cpp.o
@@ -302,7 +302,7 @@ gender_googlenet.o: gender_googlenet.cpp.o
 
 # target to build an object file
 gender_googlenet.cpp.o:
-	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/gender_googlenet.dir/build.make examples/onnxruntime/CMakeFiles/gender_googlenet.dir/gender_googlenet.cpp.o
+	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/gender_googlenet_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/gender_googlenet_onnxruntime.dir/gender_googlenet.cpp.o
 .PHONY : gender_googlenet.cpp.o
 
 gender_googlenet.i: gender_googlenet.cpp.i
@@ -311,7 +311,7 @@ gender_googlenet.i: gender_googlenet.cpp.i
 
 # target to preprocess a source file
 gender_googlenet.cpp.i:
-	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/gender_googlenet.dir/build.make examples/onnxruntime/CMakeFiles/gender_googlenet.dir/gender_googlenet.cpp.i
+	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/gender_googlenet_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/gender_googlenet_onnxruntime.dir/gender_googlenet.cpp.i
 .PHONY : gender_googlenet.cpp.i
 
 gender_googlenet.s: gender_googlenet.cpp.s
@@ -320,7 +320,7 @@ gender_googlenet.s: gender_googlenet.cpp.s
 
 # target to generate assembly for a file
 gender_googlenet.cpp.s:
-	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/gender_googlenet.dir/build.make examples/onnxruntime/CMakeFiles/gender_googlenet.dir/gender_googlenet.cpp.s
+	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/gender_googlenet_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/gender_googlenet_onnxruntime.dir/gender_googlenet.cpp.s
 .PHONY : gender_googlenet.cpp.s
 
 pfld_landmarks.o: pfld_landmarks.cpp.o
@@ -329,7 +329,7 @@ pfld_landmarks.o: pfld_landmarks.cpp.o
 
 # target to build an object file
 pfld_landmarks.cpp.o:
-	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/pfld_landmarks.dir/build.make examples/onnxruntime/CMakeFiles/pfld_landmarks.dir/pfld_landmarks.cpp.o
+	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/pfld_landmarks_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/pfld_landmarks_onnxruntime.dir/pfld_landmarks.cpp.o
 .PHONY : pfld_landmarks.cpp.o
 
 pfld_landmarks.i: pfld_landmarks.cpp.i
@@ -338,7 +338,7 @@ pfld_landmarks.i: pfld_landmarks.cpp.i
 
 # target to preprocess a source file
 pfld_landmarks.cpp.i:
-	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/pfld_landmarks.dir/build.make examples/onnxruntime/CMakeFiles/pfld_landmarks.dir/pfld_landmarks.cpp.i
+	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/pfld_landmarks_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/pfld_landmarks_onnxruntime.dir/pfld_landmarks.cpp.i
 .PHONY : pfld_landmarks.cpp.i
 
 pfld_landmarks.s: pfld_landmarks.cpp.s
@@ -347,7 +347,7 @@ pfld_landmarks.s: pfld_landmarks.cpp.s
 
 # target to generate assembly for a file
 pfld_landmarks.cpp.s:
-	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/pfld_landmarks.dir/build.make examples/onnxruntime/CMakeFiles/pfld_landmarks.dir/pfld_landmarks.cpp.s
+	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/pfld_landmarks_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/pfld_landmarks_onnxruntime.dir/pfld_landmarks.cpp.s
 .PHONY : pfld_landmarks.cpp.s
 
 ultraface_detector.o: ultraface_detector.cpp.o
@@ -356,7 +356,7 @@ ultraface_detector.o: ultraface_detector.cpp.o
 
 # target to build an object file
 ultraface_detector.cpp.o:
-	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/ultraface_detector.dir/build.make examples/onnxruntime/CMakeFiles/ultraface_detector.dir/ultraface_detector.cpp.o
+	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/ultraface_detector_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/ultraface_detector_onnxruntime.dir/ultraface_detector.cpp.o
 .PHONY : ultraface_detector.cpp.o
 
 ultraface_detector.i: ultraface_detector.cpp.i
@@ -365,7 +365,7 @@ ultraface_detector.i: ultraface_detector.cpp.i
 
 # target to preprocess a source file
 ultraface_detector.cpp.i:
-	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/ultraface_detector.dir/build.make examples/onnxruntime/CMakeFiles/ultraface_detector.dir/ultraface_detector.cpp.i
+	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/ultraface_detector_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/ultraface_detector_onnxruntime.dir/ultraface_detector.cpp.i
 .PHONY : ultraface_detector.cpp.i
 
 ultraface_detector.s: ultraface_detector.cpp.s
@@ -374,7 +374,7 @@ ultraface_detector.s: ultraface_detector.cpp.s
 
 # target to generate assembly for a file
 ultraface_detector.cpp.s:
-	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/ultraface_detector.dir/build.make examples/onnxruntime/CMakeFiles/ultraface_detector.dir/ultraface_detector.cpp.s
+	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/ultraface_detector_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/ultraface_detector_onnxruntime.dir/ultraface_detector.cpp.s
 .PHONY : ultraface_detector.cpp.s
 
 yolov5_detector.o: yolov5_detector.cpp.o
@@ -383,7 +383,7 @@ yolov5_detector.o: yolov5_detector.cpp.o
 
 # target to build an object file
 yolov5_detector.cpp.o:
-	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/yolov5_detector.dir/build.make examples/onnxruntime/CMakeFiles/yolov5_detector.dir/yolov5_detector.cpp.o
+	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/yolov5_detector_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/yolov5_detector_onnxruntime.dir/yolov5_detector.cpp.o
 .PHONY : yolov5_detector.cpp.o
 
 yolov5_detector.i: yolov5_detector.cpp.i
@@ -392,7 +392,7 @@ yolov5_detector.i: yolov5_detector.cpp.i
 
 # target to preprocess a source file
 yolov5_detector.cpp.i:
-	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/yolov5_detector.dir/build.make examples/onnxruntime/CMakeFiles/yolov5_detector.dir/yolov5_detector.cpp.i
+	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/yolov5_detector_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/yolov5_detector_onnxruntime.dir/yolov5_detector.cpp.i
 .PHONY : yolov5_detector.cpp.i
 
 yolov5_detector.s: yolov5_detector.cpp.s
@@ -401,7 +401,7 @@ yolov5_detector.s: yolov5_detector.cpp.s
 
 # target to generate assembly for a file
 yolov5_detector.cpp.s:
-	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/yolov5_detector.dir/build.make examples/onnxruntime/CMakeFiles/yolov5_detector.dir/yolov5_detector.cpp.s
+	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/yolov5_detector_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/yolov5_detector_onnxruntime.dir/yolov5_detector.cpp.s
 .PHONY : yolov5_detector.cpp.s
 
 # Help Target
@@ -411,14 +411,14 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... gender_googlenet"
-	@echo "... emotion_ferplus"
+	@echo "... fsanet_headpose_onnxruntime"
 	@echo "... rebuild_cache"
-	@echo "... pfld_landmarks"
-	@echo "... yolov5_detector"
-	@echo "... ultraface_detector"
-	@echo "... fsanet_headpose"
-	@echo "... example"
+	@echo "... yolov5_detector_onnxruntime"
+	@echo "... pfld_landmarks_onnxruntime"
+	@echo "... gender_googlenet_onnxruntime"
+	@echo "... ultraface_detector_onnxruntime"
+	@echo "... emotion_ferplus_onnxruntime"
+	@echo "... example_onnxruntime"
 	@echo "... emotion_ferplus.o"
 	@echo "... emotion_ferplus.i"
 	@echo "... emotion_ferplus.s"

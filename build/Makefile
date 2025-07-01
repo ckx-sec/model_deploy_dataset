@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named multi_engine_lib
+# Target rules for targets named model_deploy_dataset_lib
 
 # Build rule for target.
-multi_engine_lib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 multi_engine_lib
-.PHONY : multi_engine_lib
+model_deploy_dataset_lib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 model_deploy_dataset_lib
+.PHONY : model_deploy_dataset_lib
 
 # fast build rule for target.
-multi_engine_lib/fast:
-	$(MAKE) -f src/CMakeFiles/multi_engine_lib.dir/build.make src/CMakeFiles/multi_engine_lib.dir/build
-.PHONY : multi_engine_lib/fast
+model_deploy_dataset_lib/fast:
+	$(MAKE) -f src/CMakeFiles/model_deploy_dataset_lib.dir/build.make src/CMakeFiles/model_deploy_dataset_lib.dir/build
+.PHONY : model_deploy_dataset_lib/fast
 
 #=============================================================================
 # Target rules for targets named clean_assets
@@ -137,95 +137,95 @@ clean_assets/fast:
 .PHONY : clean_assets/fast
 
 #=============================================================================
-# Target rules for targets named gender_googlenet
+# Target rules for targets named fsanet_headpose_onnxruntime
 
 # Build rule for target.
-gender_googlenet: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gender_googlenet
-.PHONY : gender_googlenet
+fsanet_headpose_onnxruntime: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 fsanet_headpose_onnxruntime
+.PHONY : fsanet_headpose_onnxruntime
 
 # fast build rule for target.
-gender_googlenet/fast:
-	$(MAKE) -f examples/onnxruntime/CMakeFiles/gender_googlenet.dir/build.make examples/onnxruntime/CMakeFiles/gender_googlenet.dir/build
-.PHONY : gender_googlenet/fast
+fsanet_headpose_onnxruntime/fast:
+	$(MAKE) -f examples/onnxruntime/CMakeFiles/fsanet_headpose_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/fsanet_headpose_onnxruntime.dir/build
+.PHONY : fsanet_headpose_onnxruntime/fast
 
 #=============================================================================
-# Target rules for targets named emotion_ferplus
+# Target rules for targets named yolov5_detector_onnxruntime
 
 # Build rule for target.
-emotion_ferplus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 emotion_ferplus
-.PHONY : emotion_ferplus
+yolov5_detector_onnxruntime: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 yolov5_detector_onnxruntime
+.PHONY : yolov5_detector_onnxruntime
 
 # fast build rule for target.
-emotion_ferplus/fast:
-	$(MAKE) -f examples/onnxruntime/CMakeFiles/emotion_ferplus.dir/build.make examples/onnxruntime/CMakeFiles/emotion_ferplus.dir/build
-.PHONY : emotion_ferplus/fast
+yolov5_detector_onnxruntime/fast:
+	$(MAKE) -f examples/onnxruntime/CMakeFiles/yolov5_detector_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/yolov5_detector_onnxruntime.dir/build
+.PHONY : yolov5_detector_onnxruntime/fast
 
 #=============================================================================
-# Target rules for targets named pfld_landmarks
+# Target rules for targets named pfld_landmarks_onnxruntime
 
 # Build rule for target.
-pfld_landmarks: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pfld_landmarks
-.PHONY : pfld_landmarks
+pfld_landmarks_onnxruntime: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pfld_landmarks_onnxruntime
+.PHONY : pfld_landmarks_onnxruntime
 
 # fast build rule for target.
-pfld_landmarks/fast:
-	$(MAKE) -f examples/onnxruntime/CMakeFiles/pfld_landmarks.dir/build.make examples/onnxruntime/CMakeFiles/pfld_landmarks.dir/build
-.PHONY : pfld_landmarks/fast
+pfld_landmarks_onnxruntime/fast:
+	$(MAKE) -f examples/onnxruntime/CMakeFiles/pfld_landmarks_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/pfld_landmarks_onnxruntime.dir/build
+.PHONY : pfld_landmarks_onnxruntime/fast
 
 #=============================================================================
-# Target rules for targets named yolov5_detector
+# Target rules for targets named gender_googlenet_onnxruntime
 
 # Build rule for target.
-yolov5_detector: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 yolov5_detector
-.PHONY : yolov5_detector
+gender_googlenet_onnxruntime: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gender_googlenet_onnxruntime
+.PHONY : gender_googlenet_onnxruntime
 
 # fast build rule for target.
-yolov5_detector/fast:
-	$(MAKE) -f examples/onnxruntime/CMakeFiles/yolov5_detector.dir/build.make examples/onnxruntime/CMakeFiles/yolov5_detector.dir/build
-.PHONY : yolov5_detector/fast
+gender_googlenet_onnxruntime/fast:
+	$(MAKE) -f examples/onnxruntime/CMakeFiles/gender_googlenet_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/gender_googlenet_onnxruntime.dir/build
+.PHONY : gender_googlenet_onnxruntime/fast
 
 #=============================================================================
-# Target rules for targets named ultraface_detector
+# Target rules for targets named ultraface_detector_onnxruntime
 
 # Build rule for target.
-ultraface_detector: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ultraface_detector
-.PHONY : ultraface_detector
+ultraface_detector_onnxruntime: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ultraface_detector_onnxruntime
+.PHONY : ultraface_detector_onnxruntime
 
 # fast build rule for target.
-ultraface_detector/fast:
-	$(MAKE) -f examples/onnxruntime/CMakeFiles/ultraface_detector.dir/build.make examples/onnxruntime/CMakeFiles/ultraface_detector.dir/build
-.PHONY : ultraface_detector/fast
+ultraface_detector_onnxruntime/fast:
+	$(MAKE) -f examples/onnxruntime/CMakeFiles/ultraface_detector_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/ultraface_detector_onnxruntime.dir/build
+.PHONY : ultraface_detector_onnxruntime/fast
 
 #=============================================================================
-# Target rules for targets named fsanet_headpose
+# Target rules for targets named emotion_ferplus_onnxruntime
 
 # Build rule for target.
-fsanet_headpose: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 fsanet_headpose
-.PHONY : fsanet_headpose
+emotion_ferplus_onnxruntime: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 emotion_ferplus_onnxruntime
+.PHONY : emotion_ferplus_onnxruntime
 
 # fast build rule for target.
-fsanet_headpose/fast:
-	$(MAKE) -f examples/onnxruntime/CMakeFiles/fsanet_headpose.dir/build.make examples/onnxruntime/CMakeFiles/fsanet_headpose.dir/build
-.PHONY : fsanet_headpose/fast
+emotion_ferplus_onnxruntime/fast:
+	$(MAKE) -f examples/onnxruntime/CMakeFiles/emotion_ferplus_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/emotion_ferplus_onnxruntime.dir/build
+.PHONY : emotion_ferplus_onnxruntime/fast
 
 #=============================================================================
-# Target rules for targets named example
+# Target rules for targets named example_onnxruntime
 
 # Build rule for target.
-example: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 example
-.PHONY : example
+example_onnxruntime: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 example_onnxruntime
+.PHONY : example_onnxruntime
 
 # fast build rule for target.
-example/fast:
-	$(MAKE) -f examples/onnxruntime/CMakeFiles/example.dir/build.make examples/onnxruntime/CMakeFiles/example.dir/build
-.PHONY : example/fast
+example_onnxruntime/fast:
+	$(MAKE) -f examples/onnxruntime/CMakeFiles/example_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/example_onnxruntime.dir/build
+.PHONY : example_onnxruntime/fast
 
 # Help Target
 help:
@@ -235,15 +235,15 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... multi_engine_lib"
+	@echo "... model_deploy_dataset_lib"
 	@echo "... clean_assets"
-	@echo "... gender_googlenet"
-	@echo "... emotion_ferplus"
-	@echo "... pfld_landmarks"
-	@echo "... yolov5_detector"
-	@echo "... ultraface_detector"
-	@echo "... fsanet_headpose"
-	@echo "... example"
+	@echo "... fsanet_headpose_onnxruntime"
+	@echo "... yolov5_detector_onnxruntime"
+	@echo "... pfld_landmarks_onnxruntime"
+	@echo "... gender_googlenet_onnxruntime"
+	@echo "... ultraface_detector_onnxruntime"
+	@echo "... emotion_ferplus_onnxruntime"
+	@echo "... example_onnxruntime"
 .PHONY : help
 
 

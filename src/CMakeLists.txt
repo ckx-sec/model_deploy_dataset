@@ -1,8 +1,8 @@
-add_library(multi_engine_lib SHARED
+add_library(model_deploy_dataset_lib SHARED
     dummy.cpp
 )
 
-target_include_directories(multi_engine_lib PUBLIC
+target_include_directories(model_deploy_dataset_lib PUBLIC
     $<INSTALL_INTERFACE:include>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
 )
@@ -12,5 +12,5 @@ target_include_directories(multi_engine_lib PUBLIC
 
 # if(MEI_ENABLE_ONNXRUNTIME)
 #   find_package(ONNXRuntime REQUIRED)
-#   target_link_libraries(multi_engine_lib PRIVATE ONNXRuntime::onnxruntime)
+#   target_link_libraries(model_deploy_dataset_lib PRIVATE ONNXRuntime::onnxruntime)
 # endif() 

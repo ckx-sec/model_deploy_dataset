@@ -61,13 +61,13 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "src/CMakeFiles/multi_engine_lib.dir/DependInfo.cmake"
+  "src/CMakeFiles/model_deploy_dataset_lib.dir/DependInfo.cmake"
   "examples/CMakeFiles/clean_assets.dir/DependInfo.cmake"
-  "examples/onnxruntime/CMakeFiles/gender_googlenet.dir/DependInfo.cmake"
-  "examples/onnxruntime/CMakeFiles/emotion_ferplus.dir/DependInfo.cmake"
-  "examples/onnxruntime/CMakeFiles/pfld_landmarks.dir/DependInfo.cmake"
-  "examples/onnxruntime/CMakeFiles/yolov5_detector.dir/DependInfo.cmake"
-  "examples/onnxruntime/CMakeFiles/ultraface_detector.dir/DependInfo.cmake"
-  "examples/onnxruntime/CMakeFiles/fsanet_headpose.dir/DependInfo.cmake"
-  "examples/onnxruntime/CMakeFiles/example.dir/DependInfo.cmake"
+  "examples/onnxruntime/CMakeFiles/fsanet_headpose_onnxruntime.dir/DependInfo.cmake"
+  "examples/onnxruntime/CMakeFiles/yolov5_detector_onnxruntime.dir/DependInfo.cmake"
+  "examples/onnxruntime/CMakeFiles/pfld_landmarks_onnxruntime.dir/DependInfo.cmake"
+  "examples/onnxruntime/CMakeFiles/gender_googlenet_onnxruntime.dir/DependInfo.cmake"
+  "examples/onnxruntime/CMakeFiles/ultraface_detector_onnxruntime.dir/DependInfo.cmake"
+  "examples/onnxruntime/CMakeFiles/emotion_ferplus_onnxruntime.dir/DependInfo.cmake"
+  "examples/onnxruntime/CMakeFiles/example_onnxruntime.dir/DependInfo.cmake"
   )
