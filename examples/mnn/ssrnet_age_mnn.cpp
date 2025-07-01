@@ -38,7 +38,12 @@ int main() {
     MNN::Tensor output_host(output_tensor, output_tensor->getDimensionType());
     output_tensor->copyToHostTensor(&output_host);
     const float* outptr = output_host.host<float>();
-    float age = outptr[0] * 100.f;
-    std::cout << "Predicted age: " << age << std::endl;
+    float predicted_age = outptr[0] * 100.f;
+    printf("\n--- Results ---\n");
+    if (predicted_age >= 0.0f && predicted_age <= 120.0f) {
+        printf("Predicted Age: %.2f\n", predicted_age);
+    } else {
+        printf("Predicted Age: Invalid (out of range)\n");
+    }
     return 0;
 } 

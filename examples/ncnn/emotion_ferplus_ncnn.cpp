@@ -32,15 +32,18 @@ int main() {
     ncnn::Mat out;
     ex.extract("output", out);
     // 输出 emotion
-    int max_idx = 0;
-    float max_score = out[0];
-    for (int i = 1; i < out.w; ++i) {
-        if (out[i] > max_score) {
-            max_score = out[i];
-            max_idx = i;
-        }
+    float* ptr = (float*)out.data;
+    int max_index = std::max_element(ptr, ptr + 8) - ptr;
+    float max_prob = ptr[max_index];
+    const float prob_threshold = 0.5f;
+    const char* emotion_texts[8] = {"neutral", "happiness", "surprise", "sadness", "anger", "disgust", "fear", "contempt"};
+    printf("\n--- Results ---\n");
+    if (max_prob > prob_threshold) {
+        printf("Predicted Emotion: %s\n", emotion_texts[max_index]);
+        printf("Confidence: %.4f\n", max_prob);
+    } else {
+        printf("Predicted Emotion: Uncertain (low confidence)\n");
+        printf("Confidence: %.4f\n", max_prob);
     }
-    std::vector<std::string> emotions = {"neutral","happiness","surprise","sadness","anger","disgust","fear","contempt"};
-    std::cout << "Emotion: " << emotions[max_idx] << std::endl;
     return 0;
 } 

@@ -79,7 +79,7 @@ fsanet_headpose_EXTERNAL_OBJECTS =
 
 bin/fsanet_headpose: examples/onnxruntime/CMakeFiles/fsanet_headpose.dir/fsanet_headpose.cpp.o
 bin/fsanet_headpose: examples/onnxruntime/CMakeFiles/fsanet_headpose.dir/build.make
-bin/fsanet_headpose: src/libmulti_engine_lib.so
+bin/fsanet_headpose: src/libmodel_deploy_dataset_lib.so
 bin/fsanet_headpose: /usr/lib/aarch64-linux-gnu/libopencv_highgui.so.4.2.0
 bin/fsanet_headpose: ../third_party/onnxruntime/lib/libonnxruntime.so
 bin/fsanet_headpose: /usr/lib/aarch64-linux-gnu/libopencv_videoio.so.4.2.0

@@ -98,14 +98,20 @@ int main() {
     auto max_it = std::max_element(probs.begin(), probs.end());
     int max_index = std::distance(probs.begin(), max_it);
 
+    const float prob_threshold = 0.5f;
     const char *emotion_texts[8] = {
         "neutral", "happiness", "surprise", "sadness", "anger",
         "disgust", "fear", "contempt"
     };
     
     std::cout << "\n--- Results ---" << std::endl;
-    std::cout << "Predicted Emotion: " << emotion_texts[max_index] << std::endl;
-    std::cout << "Confidence: " << *max_it << std::endl;
+    if (*max_it > prob_threshold) {
+        std::cout << "Predicted Emotion: " << emotion_texts[max_index] << std::endl;
+        std::cout << "Confidence: " << *max_it << std::endl;
+    } else {
+        std::cout << "Predicted Emotion: Uncertain (low confidence)" << std::endl;
+        std::cout << "Confidence: " << *max_it << std::endl;
+    }
     
     return 0;
 } 

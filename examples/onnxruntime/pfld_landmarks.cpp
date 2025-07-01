@@ -118,6 +118,7 @@ int main() {
     size_t num_landmarks = output_shape[1]; // Should be 212 (106 * 2)
 
     std::vector<cv::Point2f> landmarks;
+    bool valid = true;
     for (size_t i = 0; i < num_landmarks; i += 2) {
         float x = raw_output[i];
         float y = raw_output[i+1];
@@ -125,17 +126,25 @@ int main() {
         x = std::min(std::max(0.f, x), 1.0f);
         y = std::min(std::max(0.f, y), 1.0f);
         
-        landmarks.push_back(cv::Point2f(x * img_width_orig, y * img_height_orig));
+        cv::Point2f pt(x * img_width_orig, y * img_height_orig);
+        landmarks.push_back(pt);
+        if (pt.x < 0 || pt.x >= img_width_orig || pt.y < 0 || pt.y >= img_height_orig) {
+            valid = false;
+        }
     }
     
     // --- Visualization ---
-    draw_landmarks(image, landmarks);
-    const std::string output_image_path = "face_landmarks_result.jpg";
-    cv::imwrite(output_image_path, image);
-
-    std::cout << "\n--- Results ---" << std::endl;
-    std::cout << "Detected " << landmarks.size() << " landmarks." << std::endl;
-    std::cout << "Result image saved to: " << output_image_path << std::endl;
+    if (valid) {
+        draw_landmarks(image, landmarks);
+        const std::string output_image_path = "face_landmarks_result.jpg";
+        cv::imwrite(output_image_path, image);
+        std::cout << "\n--- Results ---" << std::endl;
+        std::cout << "Detected " << landmarks.size() << " landmarks." << std::endl;
+        std::cout << "Result image saved to: " << output_image_path << std::endl;
+    } else {
+        std::cout << "\n--- Results ---" << std::endl;
+        std::cout << "Landmarks: Invalid (out of image bounds)" << std::endl;
+    }
     
     return 0;
 } 

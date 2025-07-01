@@ -79,7 +79,7 @@ gender_googlenet_EXTERNAL_OBJECTS =
 
 bin/gender_googlenet: examples/onnxruntime/CMakeFiles/gender_googlenet.dir/gender_googlenet.cpp.o
 bin/gender_googlenet: examples/onnxruntime/CMakeFiles/gender_googlenet.dir/build.make
-bin/gender_googlenet: src/libmulti_engine_lib.so
+bin/gender_googlenet: src/libmodel_deploy_dataset_lib.so
 bin/gender_googlenet: /usr/lib/aarch64-linux-gnu/libopencv_highgui.so.4.2.0
 bin/gender_googlenet: ../third_party/onnxruntime/lib/libonnxruntime.so
 bin/gender_googlenet: /usr/lib/aarch64-linux-gnu/libopencv_videoio.so.4.2.0

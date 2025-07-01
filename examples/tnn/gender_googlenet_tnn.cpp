@@ -70,6 +70,18 @@ int main(int argc, char** argv) {
         return -1;
     }
     float* output_data = static_cast<float*>(output_mat->GetData());
-    std::cout << "Gender probabilities: male=" << output_data[0] << ", female=" << output_data[1] << std::endl;
+    int max_index = std::max_element(output_data, output_data + 2) - output_data;
+    float max_prob = output_data[max_index];
+    const float prob_threshold = 0.5f;
+    const char* gender_texts[2] = {"Female", "Male"};
+    int gender_label = (max_index == 1) ? 0 : 1;
+    printf("\n--- Results ---\n");
+    if (max_prob > prob_threshold) {
+        printf("Predicted Gender: %s\n", gender_texts[gender_label]);
+        printf("Confidence: %.4f\n", max_prob);
+    } else {
+        printf("Predicted Gender: Uncertain (low confidence)\n");
+        printf("Confidence: %.4f\n", max_prob);
+    }
     return 0;
 } 

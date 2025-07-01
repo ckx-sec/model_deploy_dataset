@@ -79,7 +79,7 @@ emotion_ferplus_EXTERNAL_OBJECTS =
 
 bin/emotion_ferplus: examples/onnxruntime/CMakeFiles/emotion_ferplus.dir/emotion_ferplus.cpp.o
 bin/emotion_ferplus: examples/onnxruntime/CMakeFiles/emotion_ferplus.dir/build.make
-bin/emotion_ferplus: src/libmulti_engine_lib.so
+bin/emotion_ferplus: src/libmodel_deploy_dataset_lib.so
 bin/emotion_ferplus: /usr/lib/aarch64-linux-gnu/libopencv_highgui.so.4.2.0
 bin/emotion_ferplus: ../third_party/onnxruntime/lib/libonnxruntime.so
 bin/emotion_ferplus: /usr/lib/aarch64-linux-gnu/libopencv_videoio.so.4.2.0

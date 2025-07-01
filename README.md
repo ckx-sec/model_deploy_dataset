@@ -35,8 +35,12 @@ The main goal is to provide a unified C++ API for different inference engines an
 ## Quick Start
 
 1. 准备好 ARM Linux Docker 环境（如 `mei-builder`）。
-2. `docker run --rm -v $(pwd)/model_deploy_dataset:/app mei-builder bash -c 'cd /app && cmake -B build -S . && cmake --build build'`
-3. 在 `build/bin/` 下运行各类 demo，可执行文件后缀区分推理后端（如 `_onnxruntime`, `_mnn`, `_ncnn`, `_tnn`）。
+2. 编译命令如下：
+   ```bash
+   docker run --rm -v $(pwd)/model_deploy_dataset:/app -w /app mei-builder bash -c 'cd build && cmake .. && make -j$(nproc)'
+   ```
+   > 若首次编译，请先在容器内执行 `mkdir -p build`。
+3. 在 `build/bin/` 下运行各类 demo，所有可执行文件后缀区分推理后端（如 `_onnxruntime`, `_mnn`, `_ncnn`, `_tnn`）。
 
 ## Batch Test
 
@@ -44,8 +48,12 @@ The main goal is to provide a unified C++ API for different inference engines an
 
 ```bash
 cd build/bin
-./yolov5_detector_tnn yolov5.tnnproto yolov5.tnnmodel test.jpg
-./ultraface_detector_tnn ultraface-rfb-320.tnnproto ultraface-rfb-320.tnnmodel test.jpg
+# ONNXRuntime 后端
+./yolov5_detector_onnxruntime ...
+./ultraface_detector_onnxruntime ...
+# TNN 后端
+./yolov5_detector_tnn ...
+./ultraface_detector_tnn ...
 # 其它 demo 类推
 ```
 

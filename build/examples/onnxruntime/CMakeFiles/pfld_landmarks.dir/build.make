@@ -79,7 +79,7 @@ pfld_landmarks_EXTERNAL_OBJECTS =
 
 bin/pfld_landmarks: examples/onnxruntime/CMakeFiles/pfld_landmarks.dir/pfld_landmarks.cpp.o
 bin/pfld_landmarks: examples/onnxruntime/CMakeFiles/pfld_landmarks.dir/build.make
-bin/pfld_landmarks: src/libmulti_engine_lib.so
+bin/pfld_landmarks: src/libmodel_deploy_dataset_lib.so
 bin/pfld_landmarks: /usr/lib/aarch64-linux-gnu/libopencv_highgui.so.4.2.0
 bin/pfld_landmarks: ../third_party/onnxruntime/lib/libonnxruntime.so
 bin/pfld_landmarks: /usr/lib/aarch64-linux-gnu/libopencv_videoio.so.4.2.0

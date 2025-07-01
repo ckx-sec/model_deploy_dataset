@@ -97,9 +97,13 @@ int main() {
     float roll = raw_output[2];
 
     std::cout << "\n--- Results ---" << std::endl;
-    std::cout << "Yaw: " << yaw << std::endl;
-    std::cout << "Pitch: " << pitch << std::endl;
-    std::cout << "Roll: " << roll << std::endl;
+    if (std::abs(yaw) <= 99.0f && std::abs(pitch) <= 99.0f && std::abs(roll) <= 99.0f) {
+        std::cout << "Yaw: " << yaw << std::endl;
+        std::cout << "Pitch: " << pitch << std::endl;
+        std::cout << "Roll: " << roll << std::endl;
+    } else {
+        std::cout << "Headpose: Invalid (out of range)" << std::endl;
+    }
     
     return 0;
 } 

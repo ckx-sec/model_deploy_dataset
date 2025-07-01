@@ -32,8 +32,22 @@ int main() {
     ncnn::Mat out;
     ex.extract("output", out);
     // 输出 gender
-    int gender = out[0] > out[1] ? 0 : 1;
-    std::string gender_str = gender == 0 ? "Male" : "Female";
-    std::cout << "Gender: " << gender_str << std::endl;
+    float prob[2];
+    for (int i = 0; i < 2; i++) {
+        prob[i] = out[i];
+    }
+    int max_index = std::max_element(prob, prob + 2) - prob;
+    float max_prob = prob[max_index];
+    const float prob_threshold = 0.5f;
+    const char* gender_texts[2] = {"Female", "Male"};
+    int gender_label = (max_index == 1) ? 0 : 1;
+    printf("\n--- Results ---\n");
+    if (max_prob > prob_threshold) {
+        printf("Predicted Gender: %s\n", gender_texts[gender_label]);
+        printf("Confidence: %.4f\n", max_prob);
+    } else {
+        printf("Predicted Gender: Uncertain (low confidence)\n");
+        printf("Confidence: %.4f\n", max_prob);
+    }
     return 0;
 } 

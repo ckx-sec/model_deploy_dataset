@@ -32,7 +32,12 @@ int main() {
     ncnn::Mat out;
     ex.extract("output", out);
     // 输出 age
-    float age = out[0] * 100.f;
-    std::cout << "Predicted age: " << age << std::endl;
+    float predicted_age = out[0];
+    printf("\n--- Results ---\n");
+    if (predicted_age >= 0.0f && predicted_age <= 120.0f) {
+        printf("Predicted Age: %.2f\n", predicted_age);
+    } else {
+        printf("Predicted Age: Invalid (out of range)\n");
+    }
     return 0;
 } 

@@ -41,6 +41,13 @@ int main() {
     float yaw = outptr[0] * 90.f;
     float pitch = outptr[1] * 90.f;
     float roll = outptr[2] * 90.f;
-    std::cout << "Headpose: yaw=" << yaw << ", pitch=" << pitch << ", roll=" << roll << std::endl;
+    printf("\n--- Results ---\n");
+    if (fabs(yaw) <= 99.0f && fabs(pitch) <= 99.0f && fabs(roll) <= 99.0f) {
+        printf("Yaw: %.2f\n", yaw);
+        printf("Pitch: %.2f\n", pitch);
+        printf("Roll: %.2f\n", roll);
+    } else {
+        printf("Headpose: Invalid (out of range)\n");
+    }
     return 0;
 } 

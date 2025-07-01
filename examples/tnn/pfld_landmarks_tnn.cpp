@@ -76,5 +76,21 @@ int main(int argc, char** argv) {
         float y = output_data[i * 2 + 1];
         std::cout << "Point " << i << ": x=" << x << ", y=" << y << std::endl;
     }
+
+    bool valid = true;
+    for (int i = 0; i < 106; i++) {
+        float x = output_data[i * 2] * 112;
+        float y = output_data[i * 2 + 1] * 112;
+        if (x < 0 || x >= 112 || y < 0 || y >= 112) valid = false;
+        cv::circle(image, cv::Point(x, y), 2, cv::Scalar(0, 255, 0), -1);
+    }
+    printf("\n--- Results ---\n");
+    if (valid) {
+        printf("Detected 106 landmarks.\n");
+        cv::imwrite("face_landmarks_result.jpg", image);
+        printf("Result image saved to: face_landmarks_result.jpg\n");
+    } else {
+        printf("Landmarks: Invalid (out of image bounds)\n");
+    }
     return 0;
 } 

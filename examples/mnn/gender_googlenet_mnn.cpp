@@ -38,8 +38,18 @@ int main() {
     MNN::Tensor output_host(output_tensor, output_tensor->getDimensionType());
     output_tensor->copyToHostTensor(&output_host);
     const float* outptr = output_host.host<float>();
-    int gender = outptr[0] > outptr[1] ? 0 : 1;
-    std::string gender_str = gender == 0 ? "Male" : "Female";
-    std::cout << "Gender: " << gender_str << std::endl;
+    int max_index = std::max_element(outptr, outptr + 2) - outptr;
+    float max_prob = outptr[max_index];
+    const float prob_threshold = 0.5f;
+    const char* gender_texts[2] = {"Female", "Male"};
+    int gender_label = (max_index == 1) ? 0 : 1;
+    printf("\n--- Results ---\n");
+    if (max_prob > prob_threshold) {
+        printf("Predicted Gender: %s\n", gender_texts[gender_label]);
+        printf("Confidence: %.4f\n", max_prob);
+    } else {
+        printf("Predicted Gender: Uncertain (low confidence)\n");
+        printf("Confidence: %.4f\n", max_prob);
+    }
     return 0;
 } 

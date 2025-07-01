@@ -4,6 +4,7 @@
 examples/onnxruntime/CMakeFiles/gender_googlenet.dir/gender_googlenet.cpp.o: ../third_party/onnxruntime/include/onnxruntime_c_api.h
 examples/onnxruntime/CMakeFiles/gender_googlenet.dir/gender_googlenet.cpp.o: ../third_party/onnxruntime/include/onnxruntime_cxx_api.h
 examples/onnxruntime/CMakeFiles/gender_googlenet.dir/gender_googlenet.cpp.o: ../third_party/onnxruntime/include/onnxruntime_cxx_inline.h
+examples/onnxruntime/CMakeFiles/gender_googlenet.dir/gender_googlenet.cpp.o: ../third_party/onnxruntime/include/onnxruntime_float16.h
 examples/onnxruntime/CMakeFiles/gender_googlenet.dir/gender_googlenet.cpp.o: ../examples/onnxruntime/gender_googlenet.cpp
 examples/onnxruntime/CMakeFiles/gender_googlenet.dir/gender_googlenet.cpp.o: /usr/include/opencv4/opencv2/calib3d.hpp
 examples/onnxruntime/CMakeFiles/gender_googlenet.dir/gender_googlenet.cpp.o: /usr/include/opencv4/opencv2/core.hpp

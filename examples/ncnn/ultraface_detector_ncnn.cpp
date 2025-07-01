@@ -46,17 +46,18 @@ int main() {
 
     // 后处理（假设输出格式为 N x 6: x1, y1, x2, y2, score, label）
     std::vector<FaceBox> faces;
+    float score_threshold = 0.7f;
     for (int i = 0; i < out.h; ++i) {
         const float* values = out.row(i);
-        if (values[4] > 0.7f) { // 阈值可调
-            FaceBox box;
-            box.x1 = values[0] * img.cols / target_w;
-            box.y1 = values[1] * img.rows / target_h;
-            box.x2 = values[2] * img.cols / target_w;
-            box.y2 = values[3] * img.rows / target_h;
-            box.score = values[4];
-            faces.push_back(box);
-        }
+        float conf = values[4];
+        if (conf < score_threshold) continue;
+        FaceBox box;
+        box.x1 = values[0] * img.cols / target_w;
+        box.y1 = values[1] * img.rows / target_h;
+        box.x2 = values[2] * img.cols / target_w;
+        box.y2 = values[3] * img.rows / target_h;
+        box.score = values[4];
+        faces.push_back(box);
     }
 
     // 可视化

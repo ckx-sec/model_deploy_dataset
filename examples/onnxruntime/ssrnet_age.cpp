@@ -84,7 +84,11 @@ int main() {
     float predicted_age = raw_output[0];
 
     std::cout << "\n--- Results ---" << std::endl;
-    std::cout << "Predicted Age: " << predicted_age << std::endl;
+    if (predicted_age >= 0.0f && predicted_age <= 120.0f) {
+        std::cout << "Predicted Age: " << predicted_age << std::endl;
+    } else {
+        std::cout << "Predicted Age: Invalid (out of range)" << std::endl;
+    }
     
     return 0;
 } 

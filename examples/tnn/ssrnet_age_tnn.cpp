@@ -70,6 +70,12 @@ int main(int argc, char** argv) {
         return -1;
     }
     float* output_data = static_cast<float*>(output_mat->GetData());
-    std::cout << "Predicted age: " << output_data[0] << std::endl;
+    float predicted_age = output_data[0];
+    printf("\n--- Results ---\n");
+    if (predicted_age >= 0.0f && predicted_age <= 120.0f) {
+        printf("Predicted Age: %.2f\n", predicted_age);
+    } else {
+        printf("Predicted Age: Invalid (out of range)\n");
+    }
     return 0;
 } 

@@ -40,15 +40,23 @@ int main() {
     std::vector<cv::Point2f> landmarks;
     int num = 106;
     const float* outptr = output_host.host<float>();
+    bool valid = true;
     for (int i = 0; i < num; ++i) {
         float x = outptr[2*i] * img.cols;
         float y = outptr[2*i+1] * img.rows;
+        if (x < 0 || x >= img.cols || y < 0 || y >= img.rows) valid = false;
         landmarks.emplace_back(x, y);
     }
     for (const auto& pt : landmarks) {
         cv::circle(img, pt, 2, cv::Scalar(0,255,0), -1);
     }
-    cv::imwrite("pfld_mnn_result.jpg", img);
-    std::cout << "Landmarks saved to pfld_mnn_result.jpg" << std::endl;
+    printf("\n--- Results ---\n");
+    if (valid) {
+        printf("Detected 106 landmarks.\n");
+        cv::imwrite("pfld_mnn_result.jpg", img);
+        printf("Result image saved to: pfld_mnn_result.jpg\n");
+    } else {
+        printf("Landmarks: Invalid (out of image bounds)\n");
+    }
     return 0;
 } 

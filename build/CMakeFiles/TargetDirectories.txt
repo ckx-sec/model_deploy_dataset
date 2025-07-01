@@ -6,7 +6,6 @@
 /app/build/examples/CMakeFiles/rebuild_cache.dir
 /app/build/examples/CMakeFiles/edit_cache.dir
 /app/build/examples/CMakeFiles/clean_assets.dir
-/app/build/examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir
 /app/build/examples/onnxruntime/CMakeFiles/edit_cache.dir
 /app/build/examples/onnxruntime/CMakeFiles/fsanet_headpose_onnxruntime.dir
 /app/build/examples/onnxruntime/CMakeFiles/rebuild_cache.dir

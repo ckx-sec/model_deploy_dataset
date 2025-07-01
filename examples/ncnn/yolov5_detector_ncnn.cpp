@@ -80,6 +80,7 @@ int main() {
 
     // 后处理
     std::vector<Object> proposals;
+    float conf_threshold = 0.25f;
     for (int i = 0; i < out.h; i++) {
         const float* values = out.row(i);
         Object obj;
@@ -100,7 +101,7 @@ int main() {
         x1 = std::min((x1 - 0) / scale, (float)w);
         y1 = std::min((y1 - 0) / scale, (float)h);
         obj.rect = cv::Rect_<float>(x0, y0, x1-x0, y1-y0);
-        if (obj.prob > 0.25f) proposals.push_back(obj);
+        if (obj.prob > conf_threshold) proposals.push_back(obj);
     }
     // NMS
     std::sort(proposals.begin(), proposals.end(), [](const Object& a, const Object& b) { return a.prob > b.prob; });

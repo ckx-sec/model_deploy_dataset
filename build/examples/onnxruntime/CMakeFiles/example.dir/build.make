@@ -79,7 +79,7 @@ example_EXTERNAL_OBJECTS =
 
 bin/example: examples/onnxruntime/CMakeFiles/example.dir/example.cpp.o
 bin/example: examples/onnxruntime/CMakeFiles/example.dir/build.make
-bin/example: src/libmulti_engine_lib.so
+bin/example: src/libmodel_deploy_dataset_lib.so
 bin/example: /usr/lib/aarch64-linux-gnu/libopencv_highgui.so.4.2.0
 bin/example: ../third_party/onnxruntime/lib/libonnxruntime.so
 bin/example: /usr/lib/aarch64-linux-gnu/libopencv_videoio.so.4.2.0

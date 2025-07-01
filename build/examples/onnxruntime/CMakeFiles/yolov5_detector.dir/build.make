@@ -79,7 +79,7 @@ yolov5_detector_EXTERNAL_OBJECTS =
 
 bin/yolov5_detector: examples/onnxruntime/CMakeFiles/yolov5_detector.dir/yolov5_detector.cpp.o
 bin/yolov5_detector: examples/onnxruntime/CMakeFiles/yolov5_detector.dir/build.make
-bin/yolov5_detector: src/libmulti_engine_lib.so
+bin/yolov5_detector: src/libmodel_deploy_dataset_lib.so
 bin/yolov5_detector: /usr/lib/aarch64-linux-gnu/libopencv_highgui.so.4.2.0
 bin/yolov5_detector: ../third_party/onnxruntime/lib/libonnxruntime.so
 bin/yolov5_detector: /usr/lib/aarch64-linux-gnu/libopencv_videoio.so.4.2.0

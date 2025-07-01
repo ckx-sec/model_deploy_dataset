@@ -79,7 +79,7 @@ ultraface_detector_EXTERNAL_OBJECTS =
 
 bin/ultraface_detector: examples/onnxruntime/CMakeFiles/ultraface_detector.dir/ultraface_detector.cpp.o
 bin/ultraface_detector: examples/onnxruntime/CMakeFiles/ultraface_detector.dir/build.make
-bin/ultraface_detector: src/libmulti_engine_lib.so
+bin/ultraface_detector: src/libmodel_deploy_dataset_lib.so
 bin/ultraface_detector: /usr/lib/aarch64-linux-gnu/libopencv_highgui.so.4.2.0
 bin/ultraface_detector: ../third_party/onnxruntime/lib/libonnxruntime.so
 bin/ultraface_detector: /usr/lib/aarch64-linux-gnu/libopencv_videoio.so.4.2.0

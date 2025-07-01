@@ -38,10 +38,18 @@ int main() {
         float y = out[2*i+1] * img.rows;
         landmarks.emplace_back(x, y);
     }
+    bool valid = true;
     for (const auto& pt : landmarks) {
+        if (pt.x < 0 || pt.x >= img.cols || pt.y < 0 || pt.y >= img.rows) valid = false;
         cv::circle(img, pt, 2, cv::Scalar(0,255,0), -1);
     }
-    cv::imwrite("pfld_ncnn_result.jpg", img);
-    std::cout << "Landmarks saved to pfld_ncnn_result.jpg" << std::endl;
+    printf("\n--- Results ---\n");
+    if (valid) {
+        printf("Detected 106 landmarks.\n");
+        cv::imwrite("pfld_ncnn_result.jpg", img);
+        printf("Result image saved to: pfld_ncnn_result.jpg\n");
+    } else {
+        printf("Landmarks: Invalid (out of image bounds)\n");
+    }
     return 0;
 } 

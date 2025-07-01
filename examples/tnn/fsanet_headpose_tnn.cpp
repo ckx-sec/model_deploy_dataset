@@ -70,6 +70,16 @@ int main(int argc, char** argv) {
         return -1;
     }
     float* output_data = static_cast<float*>(output_mat->GetData());
-    std::cout << "Euler angles: yaw=" << output_data[0] << ", pitch=" << output_data[1] << ", roll=" << output_data[2] << std::endl;
+    float yaw = output_data[0];
+    float pitch = output_data[1];
+    float roll = output_data[2];
+    printf("\n--- Results ---\n");
+    if (fabs(yaw) <= 99.0f && fabs(pitch) <= 99.0f && fabs(roll) <= 99.0f) {
+        printf("Yaw: %.2f\n", yaw);
+        printf("Pitch: %.2f\n", pitch);
+        printf("Roll: %.2f\n", roll);
+    } else {
+        printf("Headpose: Invalid (out of range)\n");
+    }
     return 0;
 } 

@@ -110,6 +110,7 @@ int main() {
     auto max_it = std::max_element(probs.begin(), probs.end());
     int max_index = std::distance(probs.begin(), max_it);
 
+    const float prob_threshold = 0.5f;
     // Strange label reversing from original implementation
     // pred_gender == 1 ? 0 : 1;
     // 0: female, 1: male
@@ -117,8 +118,13 @@ int main() {
     int gender_label = (max_index == 1) ? 0 : 1;
     
     std::cout << "\n--- Results ---" << std::endl;
-    std::cout << "Predicted Gender: " << gender_texts[gender_label] << std::endl;
-    std::cout << "Confidence: " << *max_it << std::endl;
+    if (*max_it > prob_threshold) {
+        std::cout << "Predicted Gender: " << gender_texts[gender_label] << std::endl;
+        std::cout << "Confidence: " << *max_it << std::endl;
+    } else {
+        std::cout << "Predicted Gender: Uncertain (low confidence)" << std::endl;
+        std::cout << "Confidence: " << *max_it << std::endl;
+    }
     
     return 0;
 } 

@@ -111,21 +111,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/rule:
-	cd /app/build && $(MAKE) -f CMakeFiles/Makefile2 examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/rule
-.PHONY : examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/rule
-
-# Convenience name for target.
-ssrnet_age_onnxruntime: examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/rule
-
-.PHONY : ssrnet_age_onnxruntime
-
-# fast build rule for target.
-ssrnet_age_onnxruntime/fast:
-	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/build
-.PHONY : ssrnet_age_onnxruntime/fast
-
-# Convenience name for target.
 examples/onnxruntime/CMakeFiles/fsanet_headpose_onnxruntime.dir/rule:
 	cd /app/build && $(MAKE) -f CMakeFiles/Makefile2 examples/onnxruntime/CMakeFiles/fsanet_headpose_onnxruntime.dir/rule
 .PHONY : examples/onnxruntime/CMakeFiles/fsanet_headpose_onnxruntime.dir/rule
@@ -365,33 +350,6 @@ pfld_landmarks.cpp.s:
 	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/pfld_landmarks_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/pfld_landmarks_onnxruntime.dir/pfld_landmarks.cpp.s
 .PHONY : pfld_landmarks.cpp.s
 
-ssrnet_age.o: ssrnet_age.cpp.o
-
-.PHONY : ssrnet_age.o
-
-# target to build an object file
-ssrnet_age.cpp.o:
-	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/ssrnet_age.cpp.o
-.PHONY : ssrnet_age.cpp.o
-
-ssrnet_age.i: ssrnet_age.cpp.i
-
-.PHONY : ssrnet_age.i
-
-# target to preprocess a source file
-ssrnet_age.cpp.i:
-	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/ssrnet_age.cpp.i
-.PHONY : ssrnet_age.cpp.i
-
-ssrnet_age.s: ssrnet_age.cpp.s
-
-.PHONY : ssrnet_age.s
-
-# target to generate assembly for a file
-ssrnet_age.cpp.s:
-	cd /app/build && $(MAKE) -f examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/ssrnet_age.cpp.s
-.PHONY : ssrnet_age.cpp.s
-
 ultraface_detector.o: ultraface_detector.cpp.o
 
 .PHONY : ultraface_detector.o
@@ -452,7 +410,6 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... ssrnet_age_onnxruntime"
 	@echo "... edit_cache"
 	@echo "... fsanet_headpose_onnxruntime"
 	@echo "... rebuild_cache"
@@ -477,9 +434,6 @@ help:
 	@echo "... pfld_landmarks.o"
 	@echo "... pfld_landmarks.i"
 	@echo "... pfld_landmarks.s"
-	@echo "... ssrnet_age.o"
-	@echo "... ssrnet_age.i"
-	@echo "... ssrnet_age.s"
 	@echo "... ultraface_detector.o"
 	@echo "... ultraface_detector.i"
 	@echo "... ultraface_detector.s"

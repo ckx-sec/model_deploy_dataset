@@ -38,15 +38,17 @@ int main() {
     MNN::Tensor output_host(output_tensor, output_tensor->getDimensionType());
     output_tensor->copyToHostTensor(&output_host);
     const float* outptr = output_host.host<float>();
-    int max_idx = 0;
-    float max_score = outptr[0];
-    for (int i = 1; i < 8; ++i) {
-        if (outptr[i] > max_score) {
-            max_score = outptr[i];
-            max_idx = i;
-        }
+    int max_index = std::max_element(outptr, outptr + 8) - outptr;
+    float max_prob = outptr[max_index];
+    const float prob_threshold = 0.5f;
+    const char* emotion_texts[8] = {"neutral", "happiness", "surprise", "sadness", "anger", "disgust", "fear", "contempt"};
+    printf("\n--- Results ---\n");
+    if (max_prob > prob_threshold) {
+        printf("Predicted Emotion: %s\n", emotion_texts[max_index]);
+        printf("Confidence: %.4f\n", max_prob);
+    } else {
+        printf("Predicted Emotion: Uncertain (low confidence)\n");
+        printf("Confidence: %.4f\n", max_prob);
     }
-    std::vector<std::string> emotions = {"neutral","happiness","surprise","sadness","anger","disgust","fear","contempt"};
-    std::cout << "Emotion: " << emotions[max_idx] << std::endl;
     return 0;
 } 

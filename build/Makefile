@@ -137,19 +137,6 @@ clean_assets/fast:
 .PHONY : clean_assets/fast
 
 #=============================================================================
-# Target rules for targets named ssrnet_age_onnxruntime
-
-# Build rule for target.
-ssrnet_age_onnxruntime: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ssrnet_age_onnxruntime
-.PHONY : ssrnet_age_onnxruntime
-
-# fast build rule for target.
-ssrnet_age_onnxruntime/fast:
-	$(MAKE) -f examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/build.make examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/build
-.PHONY : ssrnet_age_onnxruntime/fast
-
-#=============================================================================
 # Target rules for targets named fsanet_headpose_onnxruntime
 
 # Build rule for target.
@@ -536,7 +523,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... model_deploy_dataset_lib"
 	@echo "... clean_assets"
-	@echo "... ssrnet_age_onnxruntime"
 	@echo "... fsanet_headpose_onnxruntime"
 	@echo "... yolov5_detector_onnxruntime"
 	@echo "... pfld_landmarks_onnxruntime"

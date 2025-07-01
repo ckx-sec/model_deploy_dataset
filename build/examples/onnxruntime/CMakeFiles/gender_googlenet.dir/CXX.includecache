@@ -7,9 +7,11 @@
 #IncludeRegexTransform: 
 
 ../third_party/onnxruntime/include/onnxruntime_c_api.h
-stdlib.h
+stdbool.h
 -
 stdint.h
+-
+stdlib.h
 -
 string.h
 -
@@ -19,6 +21,8 @@ specstrings.h
 ../third_party/onnxruntime/include/onnxruntime_cxx_api.h
 onnxruntime_c_api.h
 ../third_party/onnxruntime/include/onnxruntime_c_api.h
+onnxruntime_float16.h
+../third_party/onnxruntime/include/onnxruntime_float16.h
 cstddef
 -
 cstdio
@@ -45,6 +49,20 @@ onnxruntime_cxx_inline.h
 ../third_party/onnxruntime/include/onnxruntime_cxx_inline.h
 
 ../third_party/onnxruntime/include/onnxruntime_cxx_inline.h
+cstring
+-
+functional
+-
+
+../third_party/onnxruntime/include/onnxruntime_float16.h
+stdint.h
+-
+cmath
+-
+cstring
+-
+limits
+-
 
 /app/examples/onnxruntime/gender_googlenet.cpp
 iostream

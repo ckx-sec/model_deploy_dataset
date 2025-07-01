@@ -44,6 +44,7 @@ int main() {
     std::vector<FaceBox> faces;
     int num = output_host.shape()[1];
     const float* outptr = output_host.host<float>();
+    float score_threshold = 0.7f;
     for (int i = 0; i < num; ++i) {
         if (outptr[i*6+4] > 0.7f) {
             FaceBox box;

@@ -70,7 +70,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "src/CMakeFiles/model_deploy_dataset_lib.dir/DependInfo.cmake"
   "examples/CMakeFiles/clean_assets.dir/DependInfo.cmake"
-  "examples/onnxruntime/CMakeFiles/ssrnet_age_onnxruntime.dir/DependInfo.cmake"
   "examples/onnxruntime/CMakeFiles/fsanet_headpose_onnxruntime.dir/DependInfo.cmake"
   "examples/onnxruntime/CMakeFiles/yolov5_detector_onnxruntime.dir/DependInfo.cmake"
   "examples/onnxruntime/CMakeFiles/pfld_landmarks_onnxruntime.dir/DependInfo.cmake"

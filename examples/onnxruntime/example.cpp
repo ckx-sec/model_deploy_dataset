@@ -133,6 +133,7 @@ int main() {
     auto max_it = std::max_element(probs.begin(), probs.end());
     int max_index = std::distance(probs.begin(), max_it);
 
+    const float prob_threshold = 0.5f;
     // Age intervals from original implementation
     const int age_intervals[8][2] = {
         {0, 2}, {4, 6}, {8, 12}, {15, 20}, {25, 32}, {38, 43}, {48, 53}, {60, 100}
@@ -141,9 +142,14 @@ int main() {
     float predicted_age = (float)(age_intervals[max_index][0] + age_intervals[max_index][1]) / 2.0f;
 
     std::cout << "\n--- Results ---" << std::endl;
-    std::cout << "Predicted Age: " << predicted_age << std::endl;
-    std::cout << "Age Interval: " << age_intervals[max_index][0] << "-" << age_intervals[max_index][1] << " years" << std::endl;
-    std::cout << "Confidence: " << *max_it << std::endl;
+    if (*max_it > prob_threshold) {
+        std::cout << "Predicted Age: " << predicted_age << std::endl;
+        std::cout << "Age Interval: " << age_intervals[max_index][0] << "-" << age_intervals[max_index][1] << " years" << std::endl;
+        std::cout << "Confidence: " << *max_it << std::endl;
+    } else {
+        std::cout << "Predicted Age: Uncertain (low confidence)" << std::endl;
+        std::cout << "Confidence: " << *max_it << std::endl;
+    }
     
     return 0;
 } 

@@ -74,5 +74,18 @@ int main(int argc, char** argv) {
     for (int i = 0; i < 5; ++i) {
         std::cout << "Emotion " << i << ": " << output_data[i] << std::endl;
     }
+
+    int max_index = std::max_element(output_data, output_data + 8) - output_data;
+    float max_prob = output_data[max_index];
+    const float prob_threshold = 0.5f;
+    const char* emotion_texts[8] = {"neutral", "happiness", "surprise", "sadness", "anger", "disgust", "fear", "contempt"};
+    printf("\n--- Results ---\n");
+    if (max_prob > prob_threshold) {
+        printf("Predicted Emotion: %s\n", emotion_texts[max_index]);
+        printf("Confidence: %.4f\n", max_prob);
+    } else {
+        printf("Predicted Emotion: Uncertain (low confidence)\n");
+        printf("Confidence: %.4f\n", max_prob);
+    }
     return 0;
 } 
