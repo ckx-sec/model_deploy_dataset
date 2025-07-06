@@ -18,23 +18,26 @@ RUN apt-get update && \
     apt-get install -y ca-certificates && \
     sed -i 's/http/https/g' /etc/apt/sources.list
 
-# Install build dependencies
-RUN apt-get update && apt-get install -y --no-install-recommends \
+# Install essential packages
+RUN apt-get update && apt-get install -y \
     build-essential \
     cmake \
     curl \
     git \
+    wget \
+    unzip \
+    vim \
+    clang \
+    lld \
     libopencv-dev \
     && rm -rf /var/lib/apt/lists/*
+
+# We need a higher version of cmake than the one available in the default ubuntu 20.04 repos
+# so we install it from the kitware apt repository. See https://apt.kitware.com/
+# We need to install the dependencies of cmake first.
 
 # Copy the entire project context to the working directory
 COPY . .
 
-# Make the dependency script executable and run it
-RUN chmod +x scripts/prepare_dependencies.sh && ./scripts/prepare_dependencies.sh
-
-# Create a build directory and compile the project
-RUN cmake -B build -S . && cmake --build build
-
-# The final executable will be at /app/build/bin/example
-CMD ["echo", "Build complete. You can run the executable via 'docker run' or extract it with 'docker cp'."] 
+# Download and install third-party libraries
+RUN chmod +x scripts/prepare_dependencies.sh && ./scripts/prepare_dependencies.sh 

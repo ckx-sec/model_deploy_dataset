@@ -8,9 +8,9 @@ message(STATUS "Building multi_engine_inference")
 
 # --- Options to enable/disable backends ---
 option(MEI_ENABLE_ONNXRUNTIME "Enable ONNXRuntime backend" ON)
-option(MEI_ENABLE_MNN "Enable MNN backend" OFF)
+option(MEI_ENABLE_MNN "Enable MNN backend" ON)
 option(MEI_ENABLE_NCNN "Enable NCNN backend" ON)
-option(MEI_ENABLE_TNN "Enable TNN backend" OFF)
+option(MEI_ENABLE_TNN "Enable TNN backend" ON)
 option(MEI_BUILD_EXAMPLES "Build example applications" ON)
 
 # --- Include dependency helpers ---
