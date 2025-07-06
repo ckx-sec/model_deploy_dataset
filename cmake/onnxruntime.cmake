@@ -8,6 +8,7 @@ set(ONNXRUNTIME_ROOT_DIR "${CMAKE_SOURCE_DIR}/third_party/onnxruntime")
 
 find_path(ONNXRUNTIME_INCLUDE_DIR onnxruntime_cxx_api.h
     PATHS "${ONNXRUNTIME_ROOT_DIR}/include"
+    PATH_SUFFIXES onnxruntime
     NO_DEFAULT_PATH
 )
 
