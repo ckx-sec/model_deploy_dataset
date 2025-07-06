@@ -225,7 +225,7 @@ MEI_ENABLE_ONNXRUNTIME:BOOL=ON
 MEI_ENABLE_TNN:BOOL=OFF
 
 //Link inference engines statically
-MEI_LINK_STATIC:BOOL=OFF
+MEI_LINK_STATIC:BOOL=ON
 
 //Path to a library.
 MNN_LIBRARY:FILEPATH=/app/third_party/mnn/lib/libMNN.so
