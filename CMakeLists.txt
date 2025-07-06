@@ -12,6 +12,7 @@ option(MEI_ENABLE_MNN "Enable MNN backend" ON)
 option(MEI_ENABLE_NCNN "Enable NCNN backend" ON)
 option(MEI_ENABLE_TNN "Enable TNN backend" ON)
 option(MEI_BUILD_EXAMPLES "Build example applications" ON)
+option(MEI_LINK_STATIC "Link inference engines statically" OFF)
 
 # --- Include dependency helpers ---
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")

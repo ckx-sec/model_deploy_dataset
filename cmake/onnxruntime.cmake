@@ -11,19 +11,39 @@ find_path(ONNXRUNTIME_INCLUDE_DIR onnxruntime_cxx_api.h
     NO_DEFAULT_PATH
 )
 
-# Find either .so on Linux or .dylib on macOS
-find_library(ONNXRUNTIME_LIBRARY 
-    NAMES onnxruntime
-    PATHS "${ONNXRUNTIME_ROOT_DIR}/lib"
-    NO_DEFAULT_PATH
-)
+if(MEI_LINK_STATIC)
+    message(STATUS "Attempting to link ONNXRuntime statically.")
+    # Force find static library (.a)
+    set(CMAKE_FIND_LIBRARY_SUFFIXES ".a")
+    find_library(ONNXRUNTIME_LIBRARY 
+        NAMES onnxruntime
+        PATHS "${ONNXRUNTIME_ROOT_DIR}/lib"
+        NO_DEFAULT_PATH
+    )
+    # Restore default suffixes
+    set(CMAKE_FIND_LIBRARY_SUFFIXES ${CMAKE_DEFAULT_FIND_LIBRARY_SUFFIXES})
+else()
+    message(STATUS "Attempting to link ONNXRuntime dynamically.")
+    # Find either .so on Linux or .dylib on macOS
+    find_library(ONNXRUNTIME_LIBRARY 
+        NAMES onnxruntime
+        PATHS "${ONNXRUNTIME_ROOT_DIR}/lib"
+        NO_DEFAULT_PATH
+    )
+endif()
+
 
 if(ONNXRUNTIME_INCLUDE_DIR AND ONNXRUNTIME_LIBRARY)
     set(ONNXRuntime_FOUND TRUE)
     set(ONNXRUNTIME_INCLUDE_DIRS ${ONNXRUNTIME_INCLUDE_DIR})
     set(ONNXRUNTIME_LIBRARIES ${ONNXRUNTIME_LIBRARY})
     
-    add_library(ONNXRuntime::onnxruntime SHARED IMPORTED)
+    if(MEI_LINK_STATIC)
+        add_library(ONNXRuntime::onnxruntime STATIC IMPORTED)
+    else()
+        add_library(ONNXRuntime::onnxruntime SHARED IMPORTED)
+    endif()
+
     set_target_properties(ONNXRuntime::onnxruntime PROPERTIES
         IMPORTED_LOCATION "${ONNXRUNTIME_LIBRARIES}"
         INTERFACE_INCLUDE_DIRECTORIES "${ONNXRUNTIME_INCLUDE_DIRS}"
